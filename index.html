@@ -1,16 +1,863 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SmartIQ | Hart-IQ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartIQ by Hart — Smarter moves start here</title>
+  <meta name="description" content="SmartIQ by Hart is an informative real estate brand built to help buyers and sellers in Indiana move forward with clarity, confidence, and a smarter plan." />
+  <meta property="og:title" content="SmartIQ by Hart — Smarter moves start here" />
+  <meta property="og:description" content="Guides for first-time buyers, experienced buyers, and sellers. Smarter moves start here." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1a1a;
+      --ink-mid:   #3d3d3d;
+      --ink-soft:  #6b6b6b;
+      --rule:      #e4e4e0;
+      --cream:     #f9f8f5;
+      --white:     #ffffff;
+      --accent:    #1d5c8a;   /* deep steel blue — echoes Fathom palette */
+      --accent-lt: #e8f1f8;
+      --gold:      #b08d57;
+      --step-bg:   #f2f1ee;
+      --font-head: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --max:       1100px;
+      --r:         6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 clamp(1.25rem, 5vw, 3rem);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 1rem;
+    }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .nav-brand .wordmark {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+      color: var(--accent);
+    }
+    .nav-brand .tagline {
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--r);
+      letter-spacing: 0.02em;
+      transition: background 0.2s, opacity 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #174e7a; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--cream);
+      border-bottom: 1px solid var(--rule);
+      padding: clamp(4rem, 10vw, 7rem) clamp(1.25rem, 5vw, 3rem);
+      text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      max-width: 750px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--r);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #174e7a; }
+    .btn-ghost {
+      display: inline-block;
+      border: 1.5px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--r);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { background: var(--accent-lt); }
+
+    /* ── INTRO STRIP ── */
+    .intro-strip {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3.5rem clamp(1.25rem, 5vw, 3rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (max-width: 720px) {
+      .intro-strip { grid-template-columns: 1fr; gap: 1.75rem; }
+    }
+    .intro-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .intro-item .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .intro-item .value {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .intro-item .detail {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 4rem clamp(1.25rem, 5vw, 3rem) 0;
+    }
+    .section-header .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .section-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      max-width: 560px;
+    }
+    .section-header p {
+      margin-top: 0.85rem;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ── GUIDE CARDS ── */
+    .cards-section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2.5rem clamp(1.25rem, 5vw, 3rem) 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .guide-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .guide-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 760px) {
+      .guide-card { grid-template-columns: 1fr; }
+    }
+
+    .card-visual {
+      position: relative;
+      min-height: 240px;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .card-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .card-1 .card-visual { background: linear-gradient(135deg, #0f3a58 0%, #1d5c8a 60%, #2a7ab8 100%); }
+    .card-2 .card-visual { background: linear-gradient(135deg, #1a3a1a 0%, #2d5c2d 60%, #3e7e3e 100%); }
+    .card-3 .card-visual { background: linear-gradient(135deg, #3d2c00 0%, #7a5800 60%, #b08d57 100%); }
+
+    .card-visual-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .card-number {
+      font-family: var(--font-head);
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(255,255,255,0.12);
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      letter-spacing: -0.04em;
+      pointer-events: none;
+    }
+    .card-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .card-visual h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .card-body {
+      padding: 2.25rem 2rem 2.25rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.7;
+    }
+    .card-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .card-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .card-points li::before {
+      content: '→';
+      flex-shrink: 0;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 0.05em;
+    }
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: auto;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: gap 0.2s;
+    }
+    .card-1 .card-link { color: var(--accent); }
+    .card-2 .card-link { color: #2d5c2d; }
+    .card-3 .card-link { color: #8a6a1a; }
+    .card-link:hover { gap: 0.65rem; }
+
+    /* ── TOOLS SECTION ── */
+    .tools-section {
+      background: var(--step-bg);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 4rem clamp(1.25rem, 5vw, 3rem);
+    }
+    .tools-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .tools-header {
+      margin-bottom: 2.5rem;
+    }
+    .tools-header .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.65rem;
+    }
+    .tools-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      max-width: 500px;
+    }
+    .tools-header p {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 640px) {
+      .tools-grid { grid-template-columns: 1fr; }
+    }
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1.75rem;
+    }
+    .tool-card .tool-name {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .tool-card p {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+    .tool-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .tool-card a:hover { text-decoration: underline; }
+
+    /* ── ABOUT / CONTACT ── */
+    .about-section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem clamp(1.25rem, 5vw, 3rem);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .about-section { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    .about-text .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .about-text h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .about-text p:last-of-type { margin-bottom: 0; }
+
+    .contact-card {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-card .name {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .contact-card .title {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink-soft);
+      margin-top: 0.1rem;
+      letter-spacing: 0.02em;
+    }
+    .contact-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+    .contact-rows {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+    }
+    .contact-row .icon {
+      color: var(--gold);
+      flex-shrink: 0;
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-row a:hover { text-decoration: underline; }
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .btn-call {
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.7rem 1.25rem;
+      border-radius: var(--r);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .btn-call:hover { background: #174e7a; }
+    .btn-email {
+      display: block;
+      text-align: center;
+      border: 1.5px solid var(--rule);
+      color: var(--ink-mid);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 0.7rem 1.25rem;
+      border-radius: var(--r);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-email:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.6);
+      padding: 2.5rem clamp(1.25rem, 5vw, 3rem);
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-brand {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    footer p {
+      line-height: 1.6;
+    }
+    footer a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+    footer a:hover { color: rgba(255,255,255,0.85); }
+
+    /* ── SCROLL ANIMATION ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .animate-in {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+      .animate-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .animate-in:nth-child(2) { transition-delay: 0.1s; }
+      .animate-in:nth-child(3) { transition-delay: 0.2s; }
+    }
+  </style>
 </head>
 <body>
-  <h1>SmartIQ</h1>
-  <p>Choose a topic below to get started:</p>
-  <ul>
-    <li><a href="/seller">Seller Information</a></li>
-    <li><a href="/buyer">Buyer Information</a></li>
-    <li><a href="/1stbuyer">First Time Buyer</a></li>
-  </ul>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <span class="wordmark">SmartIQ by Hart</span>
+        <span class="tagline">Smarter moves start here</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#guides">Guides</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="tel:13178338419" class="nav-cta">Call Kelvin</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="top">
+    <span class="hero-eyebrow">SmartIQ by Hart &nbsp;·&nbsp; Fathom Realty Indiana</span>
+    <h1>Real estate guidance built around <em>clarity</em>, not pressure.</h1>
+    <p>SmartIQ is an informative brand created by Realtor Kelvin Hart to help buyers and sellers in Indiana think clearly, move confidently, and make better decisions at every step.</p>
+    <div class="hero-actions">
+      <a href="#guides" class="btn-primary">Explore the guides</a>
+      <a href="https://kelvinhart.fathomrealty.com" target="_blank" rel="noopener" class="btn-ghost">Kelvin's website</a>
+    </div>
+  </section>
+
+  <!-- ── INTRO STRIP ── -->
+  <div class="intro-strip">
+    <div class="intro-item animate-in">
+      <span class="label">What SmartIQ is</span>
+      <span class="value">Information before the conversation.</span>
+      <span class="detail">Each guide is built to help you understand your options before you feel the pressure of a decision.</span>
+    </div>
+    <div class="intro-item animate-in">
+      <span class="label">Who it is for</span>
+      <span class="value">First-time buyers, move-up buyers, and sellers.</span>
+      <span class="detail">Three distinct guides. Each one meets you where you are and walks through what actually matters next.</span>
+    </div>
+    <div class="intro-item animate-in">
+      <span class="label">Created by</span>
+      <span class="value">Kelvin Hart, Realtor® — Fathom Realty Indiana</span>
+      <span class="detail">Kelvin built these guides, along with AffordabilityIQ and AreaIQ, to help his clients move smarter.</span>
+    </div>
+  </div>
+
+  <!-- ── GUIDES ── -->
+  <div class="section-header" id="guides">
+    <span class="eyebrow">The SmartIQ guides</span>
+    <h2>Three guides. Three starting points. All focused on clarity.</h2>
+    <p>Choose the guide that fits where you are right now. Each one is designed to slow the process down so the next step becomes obvious.</p>
+  </div>
+
+  <div class="cards-section">
+
+    <!-- Card 1: First-Time Buyer -->
+    <article class="guide-card card-1 animate-in">
+      <div class="card-visual">
+        <span class="card-number">01</span>
+        <div class="card-visual-inner">
+          <span class="card-badge">First-time buyer</span>
+          <h3>First-Time Buyer<br>Roadmap</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Buying your first home should not feel like guessing. This guide helps you think through money, lifestyle, timing, and the steps from pre-approval to closing — at your own pace, without the pressure.</p>
+        <ul class="card-points">
+          <li>Understand what affordability really means before you search</li>
+          <li>Clear the most common first-buyer money concerns — down payments, credit, student loans</li>
+          <li>Learn what pre-approval actually requires and why it comes first</li>
+          <li>Follow the path from offer to closing, step by step</li>
+        </ul>
+        <a href="http://smartiq.hart-iq.com/1stbuyer/" class="card-link" target="_blank" rel="noopener">
+          Open the First-Time Buyer Roadmap &nbsp;→
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 2: Experienced Buyer -->
+    <article class="guide-card card-2 animate-in">
+      <div class="card-visual">
+        <span class="card-number">02</span>
+        <div class="card-visual-inner">
+          <span class="card-badge">Experienced buyer</span>
+          <h3>Buy Smart:<br>Your Next Home</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Buying again can feel familiar — but every move has a different financial picture, timeline, and set of tradeoffs. This guide helps experienced buyers reset assumptions, confirm the numbers, and make a smarter next-home decision.</p>
+        <ul class="card-points">
+          <li>Refresh your affordability picture for this season, not the last one</li>
+          <li>Understand why pre-approval still comes before showings</li>
+          <li>Define the tradeoffs — location, condition, maintenance, future flexibility</li>
+          <li>Avoid the mistakes that create stress after closing</li>
+        </ul>
+        <a href="http://smartiq.hart-iq.com/buyer/" class="card-link" target="_blank" rel="noopener" style="color:#2d5c2d;">
+          Open the Buyer's Guide &nbsp;→
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 3: Seller -->
+    <article class="guide-card card-3 animate-in">
+      <div class="card-visual">
+        <span class="card-number">03</span>
+        <div class="card-visual-inner">
+          <span class="card-badge">Seller</span>
+          <h3>Sell Smart:<br>Your Next Move</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-desc">Selling well is not just putting a sign in the yard. This guide helps you prepare the home, understand your equity, price with strategy, and move forward with a plan that keeps the sale on track from prep to closing.</p>
+        <ul class="card-points">
+          <li>Prepare the home so buyers see the space, not the distractions</li>
+          <li>Understand your equity and how it connects to the next move</li>
+          <li>Price with strategy — not just hope — and protect first-week momentum</li>
+          <li>Know what to watch for from contract to closing</li>
+        </ul>
+        <a href="http://smartiq.hart-iq.com/seller/" class="card-link" target="_blank" rel="noopener" style="color:#7a5800;">
+          Open the Seller's Guide &nbsp;→
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ── TOOLS ── -->
+  <section class="tools-section" id="tools">
+    <div class="tools-inner">
+      <div class="tools-header">
+        <span class="eyebrow">SmartIQ tools</span>
+        <h2>Decision-support tools built by Kelvin.</h2>
+        <p>Beyond the guides, Kelvin created two standalone tools to help buyers and sellers think more clearly before committing to a direction.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-name">AffordabilityIQ</div>
+          <p>A payment-clarity tool that helps you think through a full monthly picture — principal, interest, taxes, insurance, HOA dues, and maintenance — before you get too attached to a number.</p>
+          <a href="https://affordabilityiq.hart-iq.com/" target="_blank" rel="noopener">Open AffordabilityIQ →</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-name">AreaIQ</div>
+          <p>A neighborhood-thinking tool that helps buyers look beyond the listing photos and consider location, daily rhythm, commute, convenience, and long-term lifestyle fit before narrowing the search.</p>
+          <a href="https://areaiq.hart-iq.com/" target="_blank" rel="noopener">Open AreaIQ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT / CONTACT ── -->
+  <section class="about-section" id="about">
+    <div class="about-text">
+      <span class="eyebrow">The person behind SmartIQ</span>
+      <h2>Kelvin Hart built these guides because buying and selling should feel like a plan, not a gamble.</h2>
+      <p>Kelvin is a Realtor® with Fathom Realty Indiana serving buyers and sellers across the Indianapolis area. He created the SmartIQ brand — including these guides, AffordabilityIQ, and AreaIQ — because he believes that informed clients make calmer, better decisions.</p>
+      <p>The guides are free. The tools are free. The goal is simple: give you a clearer place to start so that when you are ready to talk, the conversation is more productive and less overwhelming.</p>
+      <p>When you are ready to take the next step, Kelvin can help you connect what you learned here to your actual situation — your numbers, your home, your timing.</p>
+    </div>
+    <div>
+      <div class="contact-card">
+        <div>
+          <div class="name">Kelvin Hart</div>
+          <div class="title">Realtor® &nbsp;·&nbsp; Fathom Realty Indiana</div>
+        </div>
+        <hr class="contact-divider" />
+        <div class="contact-rows">
+          <div class="contact-row">
+            <span class="icon">☎</span>
+            <a href="tel:13178338419">317.833.8419</a>
+          </div>
+          <div class="contact-row">
+            <span class="icon">✉</span>
+            <a href="mailto:khart@fathomrealty.com">khart@fathomrealty.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="icon">↗</span>
+            <a href="https://kelvinhart.fathomrealty.com" target="_blank" rel="noopener">kelvinhart.fathomrealty.com</a>
+          </div>
+        </div>
+        <hr class="contact-divider" />
+        <div class="cta-row">
+          <a href="tel:13178338419" class="btn-call">Call Kelvin</a>
+          <a href="mailto:khart@fathomrealty.com" class="btn-email">Send an email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">SmartIQ by Hart</div>
+        <p>© Kelvin Hart, Fathom Realty Indiana. &nbsp;<a href="https://kelvinhart.fathomrealty.com">kelvinhart.fathomrealty.com</a></p>
+      </div>
+      <p style="text-align:right; max-width: 340px; line-height: 1.5;">
+        These guides are educational and do not constitute financial, legal, or lending advice. Talk with a qualified lender and licensed professional about your specific situation.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll animation -->
+  <script>
+    const els = document.querySelectorAll('.animate-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  </script>
+
 </body>
 </html>
