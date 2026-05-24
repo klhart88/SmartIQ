@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sell Smart: A Practical Guide to Your Next Move | Kelvin Hart</title>
+<meta content="A modern seller guide from Kelvin Hart, Realtor with Fathom Realty Indiana. Prepare, price, market, and move with clarity." name="description"/>
+<meta content="Sell Smart: A Practical Guide to Your Next Move | Kelvin Hart" property="og:title"/>
+<meta content="A clear, modern guide for sellers who want to prepare well, price strategically, market with confidence, and move forward with less stress." property="og:description"/>
+<meta content="website" property="og:type"/>
+<style>
+
+:root {
+  --red:#c40000;
+  --gray:#4c4d4f;
+  --ink:#17191c;
+  --body:#34383d;
+  --muted:#69727a;
+  --line:#e1e5e9;
+  --soft:#f6f7f8;
+  --soft-2:#eef1f3;
+  --tint:#fbf2f2;
+  --white:#fff;
+  --max:1120px;
+  --measure:760px;
+  --radius:24px;
+  --shadow:0 24px 70px rgba(23,25,28,.10);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.55;
+  text-rendering:optimizeLegibility;
+}
+a { color:inherit; }
+button,input { font:inherit; }
+button { cursor:pointer; }
+:focus-visible { outline:3px solid rgba(196,0,0,.24); outline-offset:4px; }
+.wrapper { max-width:var(--max); margin:0 auto; padding:0 24px; }
+.topbar {
+  position:sticky;
+  top:0;
+  z-index:80;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(18px);
+  border-bottom:3px solid rgba(196,0,0,.24);
+  box-shadow:0 1px 0 rgba(225,228,232,.72);
+}
+.topbar-inner {
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand { display:flex; align-items:center; gap:10px; min-width:0; text-decoration:none; }
+.brand-mark { width:52px; height:52px; object-fit:contain; flex:0 0 52px; display:block; }
+.lockup { display:grid; gap:3px; min-width:0; }
+.lockup-title {
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:5px;
+  font-size:clamp(25px, 3vw, 38px);
+  line-height:.95;
+  letter-spacing:-.045em;
+  font-weight:950;
+}
+.lockup-title .red { color:var(--red); }
+.lockup-title .thin { color:#6b6668; font-weight:330; font-size:.58em; letter-spacing:-.05em; }
+.lockup-sub {
+  color:#4c4549;
+  font-size:clamp(10px, 1.05vw, 14px);
+  line-height:1;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.top-actions { display:flex; align-items:center; gap:10px; flex:0 0 auto; }
+.btn {
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border-radius:999px;
+  padding:0 18px;
+  border:1px solid transparent;
+  text-decoration:none;
+  font-weight:850;
+  font-size:14px;
+  line-height:1;
+  white-space:nowrap;
+}
+.btn-red { background:var(--red); color:#fff; border-color:var(--red); }
+.btn-dark { background:var(--ink); color:#fff; border-color:var(--ink); }
+.btn-light { background:#fff; color:var(--ink); border-color:var(--line); }
+.btn-soft { background:var(--soft); color:var(--ink); border-color:var(--line); }
+.btn:hover { transform:translateY(-1px); }
+.text-link { color:var(--red); text-decoration:underline; text-underline-offset:3px; font-weight:850; }
+h1,h2,h3,p { margin-top:0; }
+.kicker {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--gray);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.kicker:before { content:""; width:34px; height:2px; background:var(--red); }
+.hero { min-height:calc(100vh - 74px); display:grid; align-items:center; padding:58px 0; }
+.hero-grid { display:grid; grid-template-columns:minmax(0,1fr) 350px; gap:58px; align-items:center; }
+h1 {
+  font-size:clamp(46px, 6.4vw, 82px);
+  line-height:.98;
+  letter-spacing:-.03em;
+  max-width:900px;
+  margin-bottom:20px;
+}
+.lede { color:#30353a; font-size:clamp(18px,2vw,22px); line-height:1.42; max-width:760px; margin-bottom:26px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+.hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; color:var(--muted); font-size:13px; font-weight:750; }
+.meta-pill {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:var(--gray);
+}
+.meta-pill::after { content:"→"; color:var(--red); font-weight:900; font-size:12px; }
+.hero-card { background:var(--soft); border:1px solid var(--line); border-radius:30px; padding:34px; box-shadow:var(--shadow); }
+.hero-card .eyebrow { color:var(--red); font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px; }
+.hero-card h2 { font-size:30px; line-height:1.08; letter-spacing:-.02em; margin-bottom:10px; }
+.hero-card p { color:var(--muted); font-size:15.5px; line-height:1.5; margin-bottom:22px; }
+.nav-list { display:grid; gap:0; border-top:1px solid var(--line); margin-top:20px; }
+.nav-list a {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:12px;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--body);
+  text-decoration:none;
+  font-size:14px;
+}
+.nav-list a:after { content:"→"; color:var(--red); font-weight:900; }
+.nav-list span { color:var(--muted); display:block; margin-top:2px; font-size:13px; }
+.section { padding:82px 0; border-top:1px solid var(--line); }
+.section-soft { background:var(--soft); border-top:0; }
+.section-dark { background:var(--ink); color:#fff; border-top:0; }
+.section-head { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:46px; align-items:end; margin-bottom:42px; }
+.section-num { color:var(--red); font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin-bottom:12px; }
+.section-dark .section-num { color:#fff; opacity:.82; }
+.section-head h2 { font-size:clamp(34px,4.8vw,58px); line-height:1.04; letter-spacing:-.024em; margin-bottom:0; max-width:840px; }
+.section-head p { color:var(--muted); font-size:16px; margin:0; }
+.section-dark .section-head p { color:rgba(255,255,255,.72); }
+.quick-check { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:34px; align-items:start; }
+.quiz-panel { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px; }
+.progress-row { display:flex; align-items:center; gap:12px; margin-bottom:22px; color:var(--muted); font-size:13px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; }
+.progress-track { height:6px; background:var(--soft-2); border-radius:99px; flex:1; overflow:hidden; }
+.progress-fill { height:100%; width:20%; background:var(--red); transition:width .25s ease; }
+.question { display:none; }
+.question.active { display:block; }
+.question h3 { font-size:clamp(28px,3.4vw,42px); line-height:1.08; letter-spacing:-.018em; margin-bottom:10px; }
+.question p { color:var(--muted); font-size:16px; margin-bottom:20px; }
+.options { display:grid; gap:10px; }
+.option {
+  display:grid;
+  grid-template-columns:28px minmax(0,1fr);
+  gap:13px;
+  align-items:start;
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+}
+.option:hover { border-color:#c9ced4; background:#fbfbfc; }
+.option input { appearance:none; width:20px; height:20px; margin-top:3px; border:1.8px solid var(--red); border-radius:50%; display:grid; place-items:center; }
+.option input:checked:after { content:""; width:10px; height:10px; border-radius:50%; background:var(--red); }
+.option strong { display:block; font-size:16.5px; line-height:1.2; margin-bottom:3px; }
+.option span span { color:var(--muted); font-size:14px; line-height:1.38; display:block; }
+.quiz-controls { display:flex; justify-content:space-between; gap:12px; margin-top:20px; }
+.result-card { background:var(--soft); border-radius:var(--radius); padding:24px; border:1px solid var(--line); position:sticky; top:98px; }
+.result-label { color:var(--red); font-size:12px; font-weight:900; letter-spacing:.14em; text-transform:uppercase; margin-bottom:12px; }
+.result-card h3 { font-size:27px; line-height:1.1; letter-spacing:-.014em; margin-bottom:10px; }
+.result-card p { color:var(--muted); font-size:15px; margin-bottom:0; }
+.result-list { display:none; margin:18px 0 0; padding:0; list-style:none; border-top:1px solid var(--line); }
+.result-list.show { display:block; }
+.result-list li { display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:14px; color:var(--muted); }
+.result-list strong { color:var(--ink); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.result-actions { display:none; gap:10px; margin-top:18px; }
+.result-actions.show { display:grid; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; }
+.card { background:transparent; border:0; border-left:3px solid rgba(196,0,0,.28); border-radius:0; padding:6px 0 6px 18px; }
+.card .icon { width:auto; height:auto; border-radius:0; background:transparent; color:var(--red); display:block; font-weight:950; margin-bottom:12px; font-size:13px; letter-spacing:.12em; }
+.card h3 { font-size:22px; line-height:1.14; margin-bottom:8px; letter-spacing:-.01em; }
+.card p { color:var(--muted); font-size:15px; line-height:1.43; margin:0; }
+.two-col { display:grid; grid-template-columns:minmax(0,1fr) 335px; gap:42px; align-items:start; }
+.stack { display:grid; gap:12px; }
+.lesson-card { background:transparent; border:0; border-top:1px solid var(--line); border-radius:0; padding:22px 0; display:grid; grid-template-columns:54px minmax(0,1fr); gap:18px; }
+.lesson-card .num { color:var(--red); font-size:12px; font-weight:900; letter-spacing:.12em; text-transform:uppercase; padding-top:4px; }
+.lesson-card h3 { font-size:24px; line-height:1.12; letter-spacing:-.012em; margin-bottom:6px; }
+.lesson-card p { color:var(--muted); font-size:15.5px; line-height:1.45; margin:0; }
+.side-card { background:#fff; border:1px solid var(--line); border-radius:24px; padding:26px; }
+.side-card.sticky { position:sticky; top:98px; }
+.side-card h3 { font-size:25px; line-height:1.12; letter-spacing:-.012em; margin-bottom:8px; }
+.side-card p { color:var(--muted); font-size:15.5px; line-height:1.45; margin-bottom:18px; }
+.side-actions { display:grid; gap:10px; }
+.iq-link::after { content:"↗"; margin-left:8px; font-size:13px; }
+.callout { margin-top:34px; background:#fff; border:0; border-left:5px solid var(--red); border-radius:0 18px 18px 0; padding:24px 0 24px 24px; }
+.callout h3 { font-size:clamp(26px,3vw,38px); line-height:1.08; letter-spacing:-.01em; margin-bottom:10px; }
+.callout p { color:var(--muted); font-size:16px; line-height:1.48; max-width:860px; margin-bottom:0; }
+.tradeoff-band { background:var(--ink); color:#fff; border-radius:30px; padding:30px; display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.tradeoff-band > div + div { border-left:1px solid rgba(255,255,255,.18); padding-left:30px; }
+.pill-label { display:inline-flex; min-height:28px; align-items:center; padding:0 10px; border-radius:999px; font-size:11px; font-weight:950; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; border:1px solid rgba(255,255,255,.28); background:rgba(255,255,255,.08); }
+.tradeoff-band h3 { font-size:25px; line-height:1.12; margin-bottom:8px; }
+.tradeoff-band p { color:rgba(255,255,255,.74); font-size:15.5px; margin:0; }
+.process-lane { background:transparent; border:0; border-radius:0; padding:0; }
+.lane-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:26px; }
+.lane-head h3 { font-size:30px; line-height:1.08; margin-bottom:6px; }
+.lane-head p { color:var(--muted); margin:0; max-width:660px; }
+.lane-steps { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:24px 18px; }
+.lane-step { background:transparent; border-radius:0; padding:16px 0 0; border-top:1px solid var(--line); }
+.lane-step strong { display:block; font-size:16px; line-height:1.18; margin-bottom:6px; }
+.lane-step span { color:var(--muted); display:block; font-size:14px; line-height:1.38; }
+.avoid-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 38px; }
+.avoid { background:transparent; border:0; border-top:1px solid rgba(255,255,255,.18); border-radius:0; padding:18px 0; }
+.avoid strong { display:block; font-size:17px; line-height:1.16; margin-bottom:7px; }
+.avoid span { color:rgba(255,255,255,.72); display:block; font-size:14px; line-height:1.38; }
+details.myth { background:#fff; border:0; border-top:1px solid var(--line); border-radius:0; overflow:hidden; }
+.myth summary { list-style:none; display:grid; grid-template-columns:minmax(0,1fr) 34px; gap:18px; align-items:center; padding:22px 0; cursor:pointer; color:var(--ink); }
+.myth summary::-webkit-details-marker { display:none; }
+.myth summary strong { font-size:21px; line-height:1.15; color:var(--ink); }
+.myth summary span { display:block; color:var(--ink); font-size:14.5px; margin-top:4px; }
+.myth summary:after { content:"+"; width:34px; height:34px; border:1px solid var(--line); border-radius:50%; color:var(--red); display:grid; place-items:center; font-size:22px; }
+.myth[open] summary:after { content:"−"; }
+.myth-answer { padding:0 0 22px; color:var(--body); font-size:15.5px; line-height:1.48; }
+.cta { padding:82px 0 72px; }
+.cta-box { background:var(--soft); border:0; border-radius:34px; padding:40px; display:grid; grid-template-columns:minmax(0,1fr) 310px; gap:42px; align-items:center; }
+.cta-box h2 { font-size:clamp(34px,4vw,50px); line-height:1.04; letter-spacing:-.022em; margin-bottom:12px; }
+.cta-box p { color:var(--muted); font-size:17px; max-width:740px; margin-bottom:20px; }
+.contact-card { background:transparent; border:0; border-left:1px solid var(--line); border-radius:0; padding:4px 0 4px 28px; }
+.contact-card strong { display:block; font-size:22px; margin-bottom:2px; }
+.contact-card span { display:block; color:var(--muted); font-size:14px; margin-bottom:16px; }
+.contact-list { display:grid; gap:8px; font-size:14.5px; color:var(--body); margin-bottom:18px; }
+footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
+.back-to-top {
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:90;
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.24);
+  background:var(--ink);
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:900;
+  line-height:1;
+  box-shadow:0 14px 34px rgba(24,26,29,.20);
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity .2s ease, transform .2s ease;
+  text-decoration:none;
+}
+.back-to-top.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+.back-to-top:hover { background:var(--red); }
+@media (max-width:960px) {
+  .hero-grid,.section-head,.quick-check,.two-col,.cta-box { grid-template-columns:1fr; gap:26px; }
+  .result-card,.side-card.sticky { position:static; }
+  .grid-4 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .grid-3,.lane-steps,.avoid-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .tradeoff-band { grid-template-columns:1fr; }
+  .tradeoff-band > div + div { border-left:0; border-top:1px solid rgba(255,255,255,.18); padding-left:0; padding-top:24px; }
+  .top-actions .btn-light { display:none; }
+}
+@media (max-width:700px) {
+  .wrapper { padding:0 18px; }
+  .topbar-inner { min-height:62px; gap:10px; }
+  .brand { gap:7px; }
+  .brand-mark { width:38px; height:38px; flex-basis:38px; }
+  .lockup-title { font-size:23px; letter-spacing:-.04em; }
+  .lockup-title .thin { display:none; }
+  .lockup-sub { font-size:8.5px; letter-spacing:.045em; }
+  .top-actions .btn-red { min-height:36px; padding:0 11px; font-size:12px; }
+  .hero { min-height:auto; padding:28px 0 20px; }
+  h1 { font-size:43px; margin-bottom:14px; }
+  .lede { font-size:17px; margin-bottom:18px; }
+  .hero-card { display:none; }
+  .hero-actions .btn { width:100%; }
+  .hero-meta { margin-top:14px; gap:8px; }
+  .meta-pill { font-size:12px; padding:8px 10px; }
+  .section { padding:58px 0; }
+  .section-head { margin-bottom:28px; }
+  .section-head h2 { font-size:32px; line-height:1.08; }
+  .section-head p { font-size:15px; }
+  .quiz-panel,.result-card,.side-card,.cta-box { padding:22px; border-radius:22px; }
+  .process-lane { padding:0; border-radius:0; }
+  .quick-check { gap:14px; }
+  .quiz-controls { display:flex; flex-direction:row; align-items:center; justify-content:space-between; }
+  .quiz-controls .btn { width:auto; min-width:108px; }
+  #nextBtn { min-width:132px; }
+  .grid-3,.grid-4,.lane-steps,.avoid-grid { grid-template-columns:1fr; }
+  .card { padding:18px; border-radius:18px; }
+  .lesson-card { grid-template-columns:1fr; gap:8px; padding:20px; }
+  .lesson-card h3 { font-size:22px; }
+  .callout { padding:20px; border-radius:18px; }
+  .tradeoff-band { padding:22px; border-radius:22px; gap:22px; }
+  .tradeoff-band h3 { font-size:22px; }
+  .lane-head { display:block; }
+  .result-list li { grid-template-columns:1fr; gap:2px; }
+  .btn { width:100%; }
+  .back-to-top { width:42px; height:42px; right:16px; bottom:calc(72px + env(safe-area-inset-bottom)); font-size:18px; }
+}
+@media (max-width:390px) {
+  h1 { font-size:39px; }
+  .lockup-title { font-size:21px; }
+}
+/* v2 buyer-guide polish: lighter section treatments, fewer boxes, collapsed accordions */
+.myth summary span span { color: var(--ink) !important; }
+.section-soft .card { border-left-color: rgba(196,0,0,.34); }
+#avoid .section-head { margin-bottom: 30px; }
+#myths .stack, #fit .stack { gap: 0; }
+#myths details.myth:first-child, #fit details.myth:first-child { border-top: 0; }
+@media (max-width: 700px) {
+  .hero-card { padding:24px !important; }
+  .nav-list a { padding:15px 0 !important; }
+  .grid-3,.grid-4 { gap:22px !important; }
+  .card { padding-left:16px !important; }
+  .callout { margin-top:28px !important; padding:20px 0 20px 18px !important; }
+  .avoid-grid { grid-template-columns:1fr !important; gap:0 !important; }
+  .lane-steps { gap:0 !important; }
+  .contact-card { border-left:0 !important; border-top:1px solid var(--line); padding:24px 0 0 !important; }
+}
+
+
+/* v3 revisions: wider guide card, fewer boxes, stronger experienced-buyer flow */
+.hero-grid { grid-template-columns:minmax(0,1fr) minmax(420px, 470px); gap:72px; }
+.hero-card { padding:36px 38px; box-shadow:0 18px 55px rgba(23,25,28,.07); }
+.nav-list a { grid-template-columns:minmax(0,1fr) 18px; gap:4px 14px; padding:17px 0; }
+.nav-list a strong { grid-column:1; display:block; font-size:15px; line-height:1.18; }
+.nav-list a span { grid-column:1; display:block; margin-top:3px; color:var(--muted); font-size:14px; line-height:1.36; }
+.nav-list a:after { grid-column:2; grid-row:1 / span 2; align-self:center; justify-self:end; }
+.section { padding:76px 0; }
+.section-soft { background:#fafbfc; }
+#know-your-number { padding-bottom:70px; }
+#preapproval { padding-top:72px; }
+.myth, details.myth { background:transparent !important; border:0 !important; border-top:1px solid var(--line) !important; border-radius:0 !important; }
+.myth summary { padding:24px 0 !important; color:var(--ink) !important; }
+.myth summary > span > strong { color:var(--ink) !important; font-size:22px; }
+.myth summary > span > span { color:var(--ink) !important; opacity:1 !important; font-size:15.5px; line-height:1.42; }
+.myth-answer { color:var(--body) !important; padding:0 0 24px !important; max-width:760px; }
+.fit-accordion details:first-child { border-top:1px solid var(--line) !important; }
+.process-editorial { max-width:940px; }
+.process-row { display:grid; grid-template-columns:64px minmax(0,1fr); gap:24px; padding:24px 0; border-top:1px solid var(--line); }
+.process-row:first-child { border-top:0; padding-top:0; }
+.process-row > span { color:var(--red); font-size:12px; letter-spacing:.14em; font-weight:950; padding-top:8px; }
+.process-row strong { display:block; font-size:clamp(24px,2.8vw,34px); line-height:1.08; letter-spacing:-.018em; margin-bottom:6px; color:var(--ink); }
+.process-row p { color:var(--muted); font-size:17px; line-height:1.48; max-width:760px; margin:0; }
+.section-dark { background:#111418; }
+.avoid-list { display:grid; gap:0; max-width:980px; }
+.avoid-row { display:grid; grid-template-columns:190px minmax(0,1fr); gap:32px; padding:28px 0; border-top:1px solid rgba(255,255,255,.18); }
+.avoid-row:first-child { border-top:0; padding-top:0; }
+.avoid-row > span { color:#fff; opacity:.72; font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:900; padding-top:8px; }
+.avoid-row strong { display:block; color:#fff; font-size:clamp(24px,2.5vw,32px); line-height:1.08; letter-spacing:-.014em; margin-bottom:8px; }
+.avoid-row p { color:rgba(255,255,255,.72); font-size:17px; line-height:1.48; max-width:720px; margin:0; }
+.avoid-grid, .avoid, .lane-steps, .lane-step { background:transparent !important; border-radius:0 !important; box-shadow:none !important; }
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns:1fr; gap:30px; }
+  .hero-card { max-width:none; }
+}
+@media (max-width: 700px) {
+  .section { padding:54px 0; }
+  .hero-card { display:none !important; }
+  .process-row, .avoid-row { grid-template-columns:1fr; gap:8px; padding:22px 0; }
+  .process-row > span, .avoid-row > span { padding-top:0; }
+  .process-row strong, .avoid-row strong { font-size:24px; }
+  .process-row p, .avoid-row p { font-size:15.5px; }
+  .myth summary > span > strong { font-size:20px; }
+  .myth summary > span > span { font-size:14.5px; }
+}
+
+
+
+/* v4: requested cleanup, less boxed, wider guide card, experienced buyer tone */
+:root { --max:1240px; }
+.hero { min-height:auto !important; padding:84px 0 78px !important; }
+.hero-grid { grid-template-columns:minmax(0,1fr) minmax(440px,500px) !important; gap:64px !important; }
+.hero-card { padding:38px 42px !important; border-radius:28px !important; box-shadow:0 18px 55px rgba(23,25,28,.06) !important; }
+.hero-card h2 { font-size:32px !important; }
+.nav-list a { grid-template-columns:minmax(0,1fr) 22px !important; gap:8px 18px !important; padding:18px 0 !important; }
+.nav-list a strong { font-size:16px !important; line-height:1.18 !important; white-space:normal !important; }
+.nav-list a span { font-size:14.5px !important; line-height:1.35 !important; }
+.section { padding:88px 0 !important; }
+.section-head { margin-bottom:36px !important; }
+/* Remove boxed look from major content areas */
+.quick-check { grid-template-columns:minmax(0,1fr) 360px !important; gap:38px !important; }
+.quiz-panel, .result-card, .side-card, .callout, .tradeoff-band, .cta-box, .contact-card { box-shadow:none !important; }
+.quiz-panel { border:0 !important; border-top:4px solid var(--red) !important; border-radius:0 !important; padding:30px 0 0 !important; background:transparent !important; }
+.result-card { border:1px solid var(--line) !important; background:#fff !important; }
+.lesson-card { border-top:1px solid var(--line) !important; }
+.grid-3 { display:grid !important; grid-template-columns:1fr !important; gap:0 !important; max-width:880px !important; }
+.grid-3 .card { border-left:0 !important; border-top:1px solid var(--line) !important; padding:22px 0 !important; display:grid !important; grid-template-columns:54px minmax(0,1fr) !important; gap:18px !important; }
+.grid-3 .card .icon { margin:0 !important; padding-top:7px !important; }
+.callout { border:0 !important; border-left:4px solid var(--red) !important; border-radius:0 !important; padding:18px 0 18px 24px !important; background:transparent !important; margin-top:26px !important; max-width:900px !important; }
+.callout h3 { font-size:clamp(28px,3vw,40px) !important; }
+/* Collapsible rows: black text, collapsed by script, cleaner spacing */
+details.myth { background:transparent !important; border:0 !important; border-top:1px solid var(--line) !important; border-radius:0 !important; }
+.myth summary { color:var(--ink) !important; padding:26px 0 !important; }
+.myth summary > span, .myth summary > span > strong, .myth summary > span > span { color:var(--ink) !important; opacity:1 !important; }
+.myth summary > span > strong { font-size:23px !important; }
+.myth summary > span > span { font-size:15.5px !important; line-height:1.42 !important; }
+.myth-answer { color:var(--body) !important; max-width:800px !important; }
+/* Process and black section are editorial rows, not card grids */
+.process-lane { background:transparent !important; border:0 !important; padding:0 !important; border-radius:0 !important; }
+.process-editorial { max-width:980px !important; }
+.process-row { border-top:1px solid var(--line) !important; padding:28px 0 !important; }
+.section-dark { background:#111418 !important; }
+.avoid-list { max-width:1040px !important; display:grid !important; gap:0 !important; }
+.avoid-row { background:transparent !important; border:0 !important; border-top:1px solid rgba(255,255,255,.20) !important; border-radius:0 !important; padding:30px 0 !important; grid-template-columns:210px minmax(0,1fr) !important; }
+.avoid-row:first-child { border-top:0 !important; }
+.avoid-grid, .avoid { display:none !important; }
+@media (max-width: 980px) {
+  .hero-grid, .quick-check { grid-template-columns:1fr !important; }
+  .hero-card { max-width:none !important; }
+}
+@media (max-width: 700px) {
+  .hero { padding:34px 0 28px !important; }
+  .hero-card { display:none !important; }
+  .section { padding:58px 0 !important; }
+  .quiz-panel { padding-top:24px !important; }
+  .grid-3 .card, .process-row, .avoid-row { grid-template-columns:1fr !important; gap:8px !important; }
+  .avoid-row { padding:24px 0 !important; }
+}
+
+
+
+/* v5: flow-first refinements from review */
+/* Keep early actions focused on moving through the guide instead of contacting Kelvin too soon. */
+.top-actions .btn-light,
+.top-actions .btn-red,
+.hero-actions .btn-light,
+.result-actions .btn-red,
+.side-actions .btn-light {
+  scroll-margin-top: 92px;
+}
+
+/* Fix Step 03 vertical/squeezed copy. The cards are editorial rows, not tiny columns. */
+#preapproval .grid-3 {
+  max-width: 980px !important;
+}
+#preapproval .grid-3 .card {
+  display: grid !important;
+  grid-template-columns: 56px minmax(0, 1fr) !important;
+  column-gap: 22px !important;
+  row-gap: 4px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+#preapproval .grid-3 .card .icon {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: 36px !important;
+  text-align: left !important;
+  padding-top: 4px !important;
+}
+#preapproval .grid-3 .card h3,
+#preapproval .grid-3 .card p {
+  grid-column: 2 !important;
+  max-width: 760px !important;
+}
+#preapproval .grid-3 .card h3 {
+  margin-bottom: 4px !important;
+}
+#preapproval .grid-3 .card p {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  font-size: 16px !important;
+  line-height: 1.48 !important;
+}
+
+/* Bring accordion + buttons closer to the content instead of pushing the plus to the far edge. */
+#fit .stack,
+#myths .stack {
+  max-width: 980px !important;
+}
+#fit .myth summary,
+#myths .myth summary {
+  display: grid !important;
+  grid-template-columns: minmax(0, 780px) 42px !important;
+  justify-content: start !important;
+  column-gap: 28px !important;
+  align-items: center !important;
+}
+#fit .myth summary::after,
+#myths .myth summary::after {
+  justify-self: start !important;
+}
+#fit .myth-answer,
+#myths .myth-answer {
+  max-width: 780px !important;
+}
+
+/* Give sections a little more rhythm after removing oversized CTA blocks. */
+#know-your-number .side-card .side-actions,
+.result-actions {
+  max-width: 320px !important;
+}
+
+@media (max-width: 700px) {
+  #preapproval .grid-3 .card {
+    grid-template-columns: 34px minmax(0,1fr) !important;
+    column-gap: 12px !important;
+  }
+  #preapproval .grid-3 .card .icon {
+    width: 28px !important;
+  }
+  #fit .myth summary,
+  #myths .myth summary {
+    grid-template-columns: minmax(0,1fr) 38px !important;
+    column-gap: 14px !important;
+  }
+}
+
+
+
+/* v6: balance section intros, fix Step 03 rows, clarify tradeoff labels, and make quiz result CTA purposeful */
+@media (min-width: 901px) {
+  .section-head {
+    align-items: center !important;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 410px) !important;
+  }
+  .section-head > p {
+    align-self: center !important;
+    transform: translateY(-18px) !important;
+    font-size: 17px !important;
+    line-height: 1.48 !important;
+  }
+  #avoid .section-head > p,
+  #tradeoffs .section-head > p,
+  #preapproval .section-head > p {
+    transform: translateY(-28px) !important;
+  }
+}
+
+/* Step 03 should read like clean rows, not narrow columns. */
+#preapproval .grid-3 {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  max-width: 980px !important;
+}
+#preapproval .grid-3 .card {
+  border-left: 0 !important;
+  border-top: 1px solid var(--line) !important;
+  padding: 24px 0 !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) !important;
+  column-gap: 24px !important;
+  row-gap: 4px !important;
+  align-items: start !important;
+}
+#preapproval .grid-3 .card:first-child { border-top: 0 !important; }
+#preapproval .grid-3 .card .icon {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  width: 32px !important;
+  font-size: 13px !important;
+  padding-top: 4px !important;
+}
+#preapproval .grid-3 .card h3,
+#preapproval .grid-3 .card p {
+  grid-column: 2 !important;
+  max-width: 760px !important;
+}
+#preapproval .grid-3 .card p {
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+/* Tradeoff callout labels should feel intentional, not generic. */
+#tradeoffs .pill-label {
+  background: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #fff !important;
+}
+#tradeoffs .tradeoff-band h3 {
+  color: #fff !important;
+}
+
+/* Keep the result button visually and functionally tied to the recommended next section. */
+#resultCta { scroll-margin-top: 92px; }
+
+
+/* v7: clarify Step 01 navigation and soften progress / tradeoff labels */
+.progress-fill {
+  background: #4c4d4f !important;
+}
+#clarity-check .progress-track {
+  background: #d9dde2 !important;
+}
+#clarity-check .section-head {
+  border-bottom: 4px solid #4c4d4f !important;
+  padding-bottom: 34px !important;
+  margin-bottom: 34px !important;
+}
+#clarity-check .quick-check {
+  padding-top: 0 !important;
+}
+.section-jump {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.section-jump > span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.section-jump div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.section-jump a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 850;
+}
+.section-jump a:hover {
+  border-color: #cbd0d6;
+  background: #fafbfc;
+}
+#tradeoffs .pill-label {
+  margin-bottom: 22px !important;
+  padding: 0 16px !important;
+  min-height: 32px !important;
+  font-size: 10.5px !important;
+}
+#tradeoffs .tradeoff-band h3 {
+  margin-top: 0 !important;
+}
+@media (max-width: 700px) {
+  #clarity-check .section-head {
+    border-bottom-width: 3px !important;
+    padding-bottom: 22px !important;
+    margin-bottom: 24px !important;
+  }
+  .section-jump div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* v14: simplify recommendation action and shift confusing budget wording to affordability/full monthly picture */
+
+
+/* v15: make the quiz action singular and remove duplicate section CTA */
+#clarity-check .result-actions:empty { display: none !important; }
+#clarity-check .result-actions { display: none !important; }
+#clarity-check #nextBtn { min-width: 300px !important; }
+#clarity-check .result-list li { margin-bottom: 0 !important; }
+@media (max-width: 700px) {
+  #clarity-check #nextBtn { min-width: 0 !important; width: 100% !important; }
+}
+
+
+/* v8: remove extra divider lines above the clarity check and restore red progress status */
+#clarity-check .section-head {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 34px !important;
+}
+#clarity-check .quiz-panel {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+#clarity-check .progress-fill {
+  background: var(--red) !important;
+}
+#clarity-check .progress-track {
+  background: #e1e4e8 !important;
+}
+#clarity-check .progress-row {
+  color: var(--red) !important;
+}
+
+/* v9: make quiz navigation clearer, fix anchor positioning, and tighten dark section spacing */
+#know-your-number,
+#preapproval,
+#fit,
+#process,
+#tradeoffs,
+#avoid,
+#myths,
+#contact {
+  scroll-margin-top: 96px !important;
+}
+#clarity-check .result-actions .btn-red,
+#clarity-check #nextBtn {
+  min-width: 260px;
+}
+#avoid.section-dark {
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+}
+#avoid .section-head {
+  margin-bottom: 24px !important;
+}
+#avoid .avoid-row {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+#avoid .avoid-row strong {
+  font-size: clamp(22px,2.2vw,28px) !important;
+}
+#avoid .avoid-row p {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+}
+@media (max-width: 700px) {
+  #know-your-number,
+  #preapproval,
+  #fit,
+  #process,
+  #tradeoffs,
+  #avoid,
+  #myths,
+  #contact {
+    scroll-margin-top: 78px !important;
+  }
+  #avoid.section-dark {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+  #avoid .avoid-row {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+}
+
+
+/* v10: guide navigator polish, simplified result card, stronger IQ tool presence */
+#clarity-check { padding-top: 58px !important; padding-bottom: 58px !important; }
+#clarity-check .section-head { margin-bottom: 28px !important; }
+#clarity-check .section-head h2 { font-size: clamp(42px,5vw,70px) !important; }
+#clarity-check .section-head p { align-self:start !important; padding-top: 12px !important; }
+#clarity-check .quick-check { align-items:start !important; gap: 30px !important; }
+#clarity-check .quiz-panel { padding-top: 0 !important; }
+#clarity-check .question h3 { font-size: clamp(31px,3.6vw,48px) !important; line-height:1.08 !important; margin-bottom:8px !important; }
+#clarity-check .question p { font-size: 16px !important; margin-bottom: 16px !important; }
+#clarity-check .options { gap: 8px !important; }
+#clarity-check .option { padding: 13px 15px !important; border-radius: 15px !important; }
+#clarity-check .option strong { font-size: 16px !important; }
+#clarity-check .option span span { font-size: 13.5px !important; }
+#clarity-check .result-card { padding: 24px !important; border-radius: 22px !important; }
+#clarity-check .result-card h3 { font-size: 28px !important; }
+#clarity-check .result-card p { font-size: 15px !important; line-height: 1.45 !important; }
+#clarity-check .result-list { border-top: 0 !important; margin: 14px 0 0 !important; }
+#clarity-check .result-list li { grid-template-columns: 1fr !important; gap: 4px !important; border: 0 !important; padding: 12px 14px !important; border-radius: 14px !important; background: var(--soft) !important; }
+#clarity-check .result-list strong { color: var(--red) !important; }
+#clarity-check .result-actions { margin-top: 14px !important; }
+.browse-guide {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.browse-guide span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.browse-guide a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 850;
+}
+.browse-guide a:hover { border-color:#cbd0d6; background:#fafbfc; }
+#tradeoffs .pill-label {
+  display: inline-flex !important;
+  background: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #fff !important;
+  margin-bottom: 26px !important;
+}
+#tradeoffs .tradeoff-band { padding: 34px !important; }
+#avoid.section-dark { padding-top: 46px !important; padding-bottom: 46px !important; }
+#avoid .section-head { margin-bottom: 12px !important; }
+#avoid .avoid-list { max-width: 920px !important; }
+#avoid .avoid-row { grid-template-columns: 190px minmax(0,1fr) !important; padding-top: 18px !important; padding-bottom: 18px !important; }
+#avoid .avoid-row strong { font-size: clamp(21px,2vw,26px) !important; }
+#avoid .avoid-row p { font-size: 15.5px !important; }
+@media (max-width: 920px) {
+  #clarity-check .section-head p { padding-top: 0 !important; }
+}
+@media (max-width: 700px) {
+  #clarity-check { padding-top: 42px !important; padding-bottom: 42px !important; }
+  #clarity-check .section-head h2 { font-size: 34px !important; }
+  #clarity-check .result-actions .btn-red, #clarity-check #nextBtn { min-width: 0 !important; }
+  .browse-guide { display: grid; }
+  .browse-guide a { width: 100%; }
+  #tradeoffs .tradeoff-band { padding: 24px !important; }
+  #avoid .avoid-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+}
+
+
+/* v11: simplify tradeoff headline, remove pill styling, and give headlines more breathing room */
+#tradeoffs .section-head {
+  margin-bottom: 56px !important;
+}
+#tradeoffs .section-head h2 {
+  max-width: 740px !important;
+}
+#tradeoffs .pill-label {
+  display: none !important;
+}
+#tradeoffs .tradeoff-band {
+  padding-top: 44px !important;
+  padding-bottom: 44px !important;
+}
+#tradeoffs .tradeoff-band h3 {
+  margin-top: 0 !important;
+}
+/* Change browse links from pill buttons to a quieter text navigation row. */
+.browse-guide {
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 18px 0 !important;
+  gap: 0 !important;
+}
+.browse-guide span {
+  margin-right: 22px !important;
+}
+.browse-guide a {
+  min-height: auto !important;
+  padding: 0 15px !important;
+  border: 0 !important;
+  border-left: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+.browse-guide a:hover {
+  color: var(--red) !important;
+  background: transparent !important;
+}
+@media (max-width: 700px) {
+  #tradeoffs .section-head { margin-bottom: 32px !important; }
+  #tradeoffs .tradeoff-band { padding-top: 28px !important; padding-bottom: 28px !important; }
+  .browse-guide { display: flex !important; align-items:flex-start !important; gap: 10px 0 !important; }
+  .browse-guide span { width: 100% !important; margin-right: 0 !important; }
+  .browse-guide a { width: auto !important; border-left: 0 !important; padding: 0 12px 0 0 !important; margin-right: 12px !important; border-right: 1px solid var(--line) !important; }
+  .browse-guide a:last-child { border-right: 0 !important; }
+}
+
+
+/* v16: mobile optimization pass */
+@media (max-width: 780px) {
+  html { scroll-padding-top: 78px; }
+  .wrapper { padding-left: 18px !important; padding-right: 18px !important; }
+
+  .topbar-inner { min-height: 62px !important; gap: 10px !important; }
+  .brand { min-width: 0 !important; gap: 7px !important; }
+  .brand-mark { width: 36px !important; height: 36px !important; flex-basis: 36px !important; }
+  .lockup-title { font-size: 22px !important; line-height: .98 !important; letter-spacing: -.04em !important; }
+  .lockup-title .thin { display: none !important; }
+  .lockup-sub { font-size: 8.5px !important; letter-spacing: .045em !important; }
+  .top-actions { gap: 6px !important; }
+  .top-actions .btn-red { min-height: 36px !important; padding: 0 12px !important; font-size: 12px !important; }
+
+  .hero { padding: 32px 0 34px !important; }
+  h1 { font-size: clamp(37px, 11vw, 44px) !important; line-height: 1.02 !important; letter-spacing: -.035em !important; margin-bottom: 14px !important; }
+  .lede { font-size: 16.5px !important; line-height: 1.45 !important; margin-bottom: 18px !important; }
+  .hero-actions { display: grid !important; gap: 9px !important; }
+  .hero-actions .btn { width: 100% !important; }
+  .hero-meta { display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px !important; margin-top: 16px !important; }
+  .meta-pill { width: 100% !important; justify-content: space-between !important; font-size: 12px !important; padding: 8px 10px !important; }
+
+  .section { padding: 50px 0 !important; }
+  .section-head { display: grid !important; grid-template-columns: 1fr !important; gap: 14px !important; margin-bottom: 24px !important; }
+  .section-head h2 { font-size: clamp(30px, 9vw, 36px) !important; line-height: 1.07 !important; letter-spacing: -.024em !important; }
+  .section-head p { transform: none !important; padding-top: 0 !important; font-size: 15.5px !important; line-height: 1.45 !important; max-width: 100% !important; }
+  .section-num { margin-bottom: 10px !important; }
+
+  #clarity-check { padding-top: 42px !important; padding-bottom: 42px !important; }
+  #clarity-check .quick-check { display: grid !important; grid-template-columns: 1fr !important; gap: 16px !important; }
+  #clarity-check .quiz-panel { padding-top: 0 !important; border-top: 0 !important; }
+  #clarity-check .progress-row { margin-bottom: 16px !important; gap: 9px !important; font-size: 12px !important; }
+  #clarity-check .question h3 { font-size: clamp(27px, 8vw, 32px) !important; line-height: 1.1 !important; margin-bottom: 8px !important; }
+  #clarity-check .question p { font-size: 15px !important; line-height: 1.42 !important; margin-bottom: 14px !important; }
+  #clarity-check .options { gap: 8px !important; }
+  #clarity-check .option { grid-template-columns: 24px minmax(0,1fr) !important; gap: 11px !important; padding: 14px !important; border-radius: 15px !important; }
+  #clarity-check .option input { width: 19px !important; height: 19px !important; margin-top: 2px !important; }
+  #clarity-check .option strong { font-size: 15.5px !important; line-height: 1.2 !important; }
+  #clarity-check .option span span { font-size: 13.5px !important; line-height: 1.34 !important; }
+  #clarity-check .quiz-controls { gap: 10px !important; margin-top: 16px !important; }
+  #clarity-check .quiz-controls .btn { min-width: 0 !important; }
+  #clarity-check #nextBtn { flex: 1 !important; width: auto !important; }
+  #clarity-check .result-card:not(.has-result) { display: none !important; }
+  #clarity-check .result-card { padding: 20px !important; border-radius: 20px !important; }
+  #clarity-check .result-card h3 { font-size: 24px !important; }
+  #clarity-check .result-card p { font-size: 14.5px !important; }
+
+  .two-col, .quick-check, .cta-box { grid-template-columns: 1fr !important; }
+  .two-col { gap: 24px !important; }
+  .lesson-card { grid-template-columns: 1fr !important; gap: 6px !important; padding: 18px 0 !important; }
+  .lesson-card .num { padding-top: 0 !important; }
+  .lesson-card h3 { font-size: 21px !important; }
+  .lesson-card p { font-size: 15px !important; }
+  .side-card, .cta-box { padding: 22px !important; border-radius: 22px !important; }
+  .side-card h3 { font-size: 22px !important; }
+  .side-card p { font-size: 15px !important; }
+
+  #preapproval .grid-3 .card { grid-template-columns: 32px minmax(0,1fr) !important; column-gap: 12px !important; padding: 18px 0 !important; }
+  #preapproval .grid-3 .card .icon { width: 28px !important; padding-top: 3px !important; }
+  #preapproval .grid-3 .card h3 { font-size: 20px !important; }
+  #preapproval .grid-3 .card p { font-size: 15px !important; line-height: 1.42 !important; }
+  .callout { margin-top: 22px !important; padding: 18px 0 18px 18px !important; }
+  .callout h3 { font-size: 25px !important; }
+  .callout p { font-size: 15px !important; }
+
+  #fit .myth summary, #myths .myth summary { grid-template-columns: minmax(0,1fr) 34px !important; column-gap: 12px !important; padding: 20px 0 !important; }
+  #fit .myth summary::after, #myths .myth summary::after { width: 32px !important; height: 32px !important; font-size: 20px !important; }
+  .myth summary > span > strong, #fit .myth summary > span > strong, #myths .myth summary > span > strong { font-size: 19px !important; }
+  .myth summary > span > span, #fit .myth summary > span > span, #myths .myth summary > span > span { font-size: 14px !important; }
+  .myth-answer { font-size: 15px !important; line-height: 1.45 !important; }
+
+  #tradeoffs .section-head { margin-bottom: 24px !important; }
+  #tradeoffs .tradeoff-band { grid-template-columns: 1fr !important; gap: 20px !important; padding: 24px !important; border-radius: 22px !important; }
+  #tradeoffs .tradeoff-band > div + div { border-left: 0 !important; border-top: 1px solid rgba(255,255,255,.18) !important; padding-left: 0 !important; padding-top: 20px !important; }
+  #tradeoffs .tradeoff-band h3 { font-size: 22px !important; line-height: 1.15 !important; }
+  #tradeoffs .tradeoff-band p { font-size: 14.5px !important; line-height: 1.45 !important; }
+
+  .process-row { grid-template-columns: 1fr !important; gap: 5px !important; padding: 20px 0 !important; }
+  .process-row > span { padding-top: 0 !important; }
+  .process-row strong { font-size: 23px !important; }
+  .process-row p { font-size: 15px !important; }
+
+  #avoid.section-dark { padding-top: 38px !important; padding-bottom: 38px !important; }
+  #avoid .section-head { margin-bottom: 12px !important; }
+  #avoid .avoid-row { grid-template-columns: 1fr !important; gap: 5px !important; padding: 18px 0 !important; }
+  #avoid .avoid-row > span { padding-top: 0 !important; font-size: 11px !important; }
+  #avoid .avoid-row strong { font-size: 22px !important; }
+  #avoid .avoid-row p { font-size: 14.5px !important; line-height: 1.44 !important; }
+
+  .cta { padding: 54px 0 !important; }
+  .cta-box h2 { font-size: 31px !important; }
+  .cta-box p { font-size: 15.5px !important; }
+  .contact-card { border-left: 0 !important; border-top: 1px solid var(--line) !important; padding: 22px 0 0 !important; }
+  .contact-card .btn, .cta-box .btn { width: 100% !important; }
+  footer { padding-bottom: 72px !important; }
+}
+
+@media (max-width: 420px) {
+  .top-actions .btn-red { padding: 0 10px !important; }
+  .top-actions .btn-red span { display: none !important; }
+  .hero-meta { grid-template-columns: 1fr !important; }
+  h1 { font-size: 36px !important; }
+  #clarity-check .quiz-controls { display: grid !important; grid-template-columns: 96px 1fr !important; }
+  #clarity-check #nextBtn { width: 100% !important; }
+  .back-to-top { bottom: calc(18px + env(safe-area-inset-bottom)) !important; }
+}
+
+
+
+/* v17: restore red tradeoff pill headers on both sides */
+#tradeoffs .pill-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 32px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--red) !important;
+  background: var(--red) !important;
+  color: #fff !important;
+  font-size: 10.5px !important;
+  font-weight: 950 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 22px !important;
+}
+
+
+
+/* v19: mobile cleanup */
+@media (max-width: 700px) {
+  .hero-meta {
+    display: none !important;
+  }
+
+  /* Put the IQ tool cards directly under each section intro on mobile
+     so they feel like intentional section tools, not cards dropped after the content. */
+  .two-col > .side-card {
+    order: -1 !important;
+    position: static !important;
+    padding: 26px 22px !important;
+    border-radius: 26px !important;
+    margin-bottom: 6px !important;
+  }
+  .two-col > .side-card h3 {
+    font-size: 25px !important;
+    line-height: 1.12 !important;
+  }
+  .two-col > .side-card p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+  .two-col > .side-card .side-actions {
+    display: grid !important;
+    gap: 10px !important;
+  }
+  .two-col > .side-card .btn {
+    width: 100% !important;
+  }
+}
+
+
+
+/* v20: clickable IQ recommendations in Section 1 */
+#clarity-check .result-list a.result-tool-link {
+  color: var(--ink) !important;
+  font-weight: 850 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1.5px !important;
+  text-underline-offset: 3px !important;
+}
+#clarity-check .result-list a.result-tool-link::after {
+  content: " ↗";
+  color: var(--red);
+  font-weight: 950;
+}
+
+
+
+/* v21: on mobile, place IQ tool cards after the section details */
+@media (max-width: 700px) {
+  .two-col > .side-card {
+    order: 2 !important;
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+  }
+  .two-col > .stack {
+    order: 1 !important;
+  }
+}
+
+
+/* v22: make tradeoff pill headers smaller on mobile */
+@media (max-width: 700px) {
+  #tradeoffs .pill-label {
+    min-height: 24px !important;
+    padding: 0 10px !important;
+    font-size: 9px !important;
+    letter-spacing: .12em !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+
+/* v23: clarify Kelvin-created tools and give the dark section more breathing room */
+#avoid .section-head {
+  margin-bottom: 46px !important;
+}
+#avoid .section-head h2 {
+  margin-bottom: 12px !important;
+}
+#avoid .section-head p {
+  transform: none !important;
+}
+@media (max-width: 700px) {
+  #avoid .section-head {
+    margin-bottom: 30px !important;
+  }
+  #avoid .section-head h2 {
+    margin-bottom: 8px !important;
+  }
+}
+
+
+
+/* v17: give the Step 07 headline more breathing room before the mistake rows */
+#avoid .section-head {
+  margin-bottom: 34px !important;
+}
+#avoid .section-head h2 {
+  margin-bottom: 20px !important;
+}
+@media (max-width: 780px) {
+  #avoid .section-head {
+    margin-bottom: 28px !important;
+  }
+  #avoid .section-head h2 {
+    margin-bottom: 14px !important;
+  }
+}
+
+
+
+/* v18: quiet comparative market analysis callout */
+.cma-card {
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 24px !important;
+  padding: 26px !important;
+}
+.cma-card .mini-kicker {
+  display: inline-flex;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.cma-card h3 {
+  font-size: 26px;
+  line-height: 1.12;
+  letter-spacing: -.014em;
+  margin-bottom: 8px;
+}
+.cma-card p {
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.48;
+  margin-bottom: 18px;
+}
+.cma-inline {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+.cma-inline strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.18;
+  margin-bottom: 4px;
+}
+.cma-inline span {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.42;
+}
+@media (max-width: 780px) {
+  .cma-card { padding: 22px !important; border-radius: 22px !important; }
+  .cma-inline { grid-template-columns: 1fr; gap: 14px; }
+  .cma-inline .btn { width: 100%; }
+}
+
+
+
+
+
+
+/* v19: keep the comparative market analysis as a single, quiet pricing callout */
+#fit .side-card {
+  background: #fff !important;
+  border: 1px solid var(--line) !important;
+}
+#fit .side-card h3 {
+  font-size: 24px !important;
+}
+#fit .side-card p {
+  margin-bottom: 18px !important;
+}
+
+
+/* v20: keep the CMA callout button compact */
+#fit .side-card .side-actions {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+#fit .side-card .btn {
+  width: auto !important;
+  max-width: max-content !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+@media (max-width: 700px) {
+  #fit .side-card .btn {
+    width: auto !important;
+    max-width: max-content !important;
+  }
+}
+
+
+
+/* v21: compact button sizing across the guide */
+.btn {
+  width: auto !important;
+  max-width: 100% !important;
+  align-self: flex-start !important;
+}
+.hero-actions,
+.side-actions,
+.result-actions,
+.cta-box div[style*="display:flex"],
+.quiz-controls {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+.hero-actions .btn,
+.side-actions .btn,
+.two-col > .side-card .btn,
+.contact-card .btn,
+.cta-box .btn,
+.result-actions .btn,
+.quiz-controls .btn,
+.cma-inline .btn,
+#fit .side-card .btn {
+  width: auto !important;
+  max-width: max-content !important;
+  min-width: 0 !important;
+  flex: 0 0 auto !important;
+}
+#nextBtn {
+  min-width: 132px !important;
+}
+@media (max-width: 480px) {
+  .hero-actions,
+  .side-actions,
+  .result-actions,
+  .cta-box div[style*="display:flex"] {
+    gap: 10px !important;
+  }
+  .hero-actions .btn,
+  .side-actions .btn,
+  .two-col > .side-card .btn,
+  .contact-card .btn,
+  .cta-box .btn,
+  .result-actions .btn,
+  .cma-inline .btn,
+  #fit .side-card .btn {
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+}
+
+
+
+/* v25: reduce red pill labels further on small mobile screens */
+@media (max-width: 700px) {
+  #tradeoffs .pill-label {
+    min-height: 22px !important;
+    padding: 0 9px !important;
+    font-size: 8px !important;
+    letter-spacing: .11em !important;
+    margin-bottom: 14px !important;
+  }
+}
+@media (max-width: 430px) {
+  #tradeoffs .pill-label {
+    min-height: 20px !important;
+    padding: 0 8px !important;
+    font-size: 7.5px !important;
+    letter-spacing: .10em !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+</style>
+
+<style id="button-width-final-override">
+  /* Final button sizing override: keep buttons content-sized across the guide. */
+  a.btn, button.btn, .btn {
+    width: fit-content !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+    white-space: nowrap !important;
+  }
+
+  .hero-actions,
+  .side-actions,
+  .result-actions,
+  .quiz-controls,
+  .cta-box div[style*="display:flex"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .contact-card .btn,
+  .cta-box .btn,
+  .side-card .btn,
+  .hero-actions .btn,
+  .cma-inline .btn,
+  #fit .side-card .btn {
+    width: fit-content !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  @media (max-width: 520px) {
+    a.btn, button.btn, .btn {
+      width: fit-content !important;
+      max-width: 100% !important;
+      white-space: normal !important;
+      text-align: center !important;
+    }
+    .quiz-controls .btn {
+      width: auto !important;
+    }
+  }
+</style>
+
+<style id="clean-header-button-polish">
+  /* Clean SmartIQ header without using a screenshot image */
+  .topbar {
+    border-bottom: 3px solid rgba(196,0,0,.18) !important;
+  }
+  .topbar-inner {
+    min-height: 86px !important;
+    gap: 20px !important;
+  }
+  .brand {
+    gap: 16px !important;
+  }
+  .brand-mark {
+    width: 70px !important;
+    height: 70px !important;
+    flex-basis: 70px !important;
+  }
+  .smartiq-lockup-title,
+  .lockup-title {
+    font-size: clamp(34px, 4.9vw, 64px) !important;
+    letter-spacing: -.065em !important;
+    line-height: .86 !important;
+    align-items: baseline !important;
+    gap: 2px !important;
+  }
+  .smartiq-lockup-title .thin,
+  .lockup-title .thin {
+    color: #6b6668 !important;
+    font-size: .48em !important;
+    font-weight: 360 !important;
+    letter-spacing: -.055em !important;
+    margin-left: 8px !important;
+  }
+  .lockup-sub {
+    color: #4c4d4f !important;
+    font-size: clamp(12px, 1.55vw, 23px) !important;
+    letter-spacing: .15em !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+  }
+
+  /* Button proportion pass */
+  a.btn,
+  button.btn,
+  .btn {
+    min-height: 40px !important;
+    padding: 0 16px !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+  .hero-actions,
+  .side-actions,
+  .result-actions,
+  .quiz-controls,
+  .cta-box div[style*="display:flex"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+  .iq-link::after {
+    content: "↗" !important;
+    margin-left: 2px !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    transform: translateY(-1px) !important;
+  }
+  a.btn.iq-link {
+    padding-right: 13px !important;
+  }
+  #clarity-check #nextBtn,
+  #nextBtn {
+    min-width: 132px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  @media (max-width: 780px) {
+    .topbar-inner {
+      min-height: 70px !important;
+      gap: 10px !important;
+    }
+    .brand-mark {
+      width: 44px !important;
+      height: 44px !important;
+      flex-basis: 44px !important;
+    }
+    .smartiq-lockup-title,
+    .lockup-title {
+      font-size: 29px !important;
+      letter-spacing: -.055em !important;
+      line-height: .9 !important;
+    }
+    .smartiq-lockup-title .thin,
+    .lockup-title .thin {
+      display: inline !important;
+      font-size: .43em !important;
+      margin-left: 5px !important;
+    }
+    .lockup-sub {
+      font-size: 10px !important;
+      letter-spacing: .11em !important;
+    }
+    .top-actions .btn-red {
+      min-height: 36px !important;
+      padding: 0 12px !important;
+      font-size: 12px !important;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .topbar-inner {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    .top-actions {
+      display: none !important;
+    }
+    a.btn,
+    button.btn,
+    .btn {
+      white-space: normal !important;
+    }
+  }
+</style>
+
+<style id="small-header-final-override">
+  /* Smaller SmartIQ header */
+  .topbar-inner {
+    min-height: 58px !important;
+    gap: 14px !important;
+  }
+  .brand {
+    gap: 10px !important;
+  }
+  .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
+  }
+  .smartiq-lockup-title,
+  .lockup-title {
+    font-size: clamp(24px, 2.8vw, 38px) !important;
+    line-height: .9 !important;
+    letter-spacing: -.055em !important;
+    gap: 1px !important;
+  }
+  .smartiq-lockup-title .thin,
+  .lockup-title .thin {
+    font-size: .46em !important;
+    margin-left: 5px !important;
+  }
+  .lockup-sub {
+    font-size: clamp(9px, .9vw, 12px) !important;
+    letter-spacing: .12em !important;
+    line-height: 1.05 !important;
+  }
+  .top-actions .btn-red {
+    min-height: 34px !important;
+    padding: 0 13px !important;
+    font-size: 12px !important;
+  }
+
+  @media (max-width: 780px) {
+    .topbar-inner {
+      min-height: 54px !important;
+      gap: 8px !important;
+    }
+    .brand-mark {
+      width: 34px !important;
+      height: 34px !important;
+      flex-basis: 34px !important;
+    }
+    .smartiq-lockup-title,
+    .lockup-title {
+      font-size: 23px !important;
+      line-height: .92 !important;
+    }
+    .smartiq-lockup-title .thin,
+    .lockup-title .thin {
+      font-size: .4em !important;
+      margin-left: 4px !important;
+    }
+    .lockup-sub {
+      font-size: 8.5px !important;
+      letter-spacing: .09em !important;
+    }
+  }
+</style>
+
+<style id="mobile-quiz-button-alignment-final">
+  /* Align the quiz navigation cleanly on mobile, especially the first Keep going button. */
+  @media (max-width: 780px) {
+    #clarity-check .quiz-controls {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 10px !important;
+      width: 100% !important;
+      margin-top: 22px !important;
+    }
+
+    #clarity-check .quiz-controls #nextBtn,
+    #clarity-check .quiz-controls .btn-red {
+      justify-self: center !important;
+      align-self: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: auto !important;
+      min-width: 150px !important;
+      max-width: max-content !important;
+    }
+
+    #clarity-check .quiz-controls #prevBtn {
+      width: auto !important;
+      min-width: 82px !important;
+      max-width: max-content !important;
+    }
+  }
+
+  @media (min-width: 781px) {
+    #clarity-check .quiz-controls {
+      justify-content: flex-start !important;
+    }
+  }
+</style>
+
+</head>
+<body>
+<header class="topbar" id="top">
+<div class="wrapper topbar-inner">
+<a aria-label="SmartIQ by Hart home" class="brand" href="#top">
+<img alt="Fathom Realty" class="brand-mark" src="data:image/png;base64,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"/>
+<span class="lockup">
+<span class="lockup-title smartiq-lockup-title"><span class="red">Smart</span><span>IQ</span><span class="thin">by Hart</span></span>
+<span class="lockup-sub">Smarter moves start here</span>
+</span>
+</a>
+<div class="top-actions"><a class="btn btn-red" href="#clarity-check">Start Guide</a></div>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero">
+<div class="wrapper hero-grid">
+<div>
+<div class="kicker">A seller guide for the next right move</div>
+<h1 id="hero-title">Sell Smart: A Practical Guide to Your Next Move</h1>
+<p class="lede">Selling well is not just putting a sign in the yard. It is understanding your equity, preparing the home, pricing with strategy, and moving forward with a plan. Kelvin can guide the sale and connect you with the tools he created to help you think clearly about the next move.</p>
+<div class="hero-actions">
+<a class="btn btn-red" href="#clarity-check">Start the readiness check</a>
+<a class="btn btn-soft" href="#know-your-number">Start with equity</a>
+</div>
+<div aria-label="Guide highlights" class="hero-meta">
+<a class="meta-pill" href="#know-your-number">Equity</a>
+<a class="meta-pill" href="#preapproval">Prep</a>
+<a class="meta-pill" href="#fit">Pricing</a>
+<a class="meta-pill" href="#process">Process</a>
+</div>
+</div>
+<aside aria-label="Guide overview" class="hero-card">
+<div class="eyebrow">Inside this guide</div>
+<h2>A calmer way to sell.</h2>
+<p>Use this guide to clarify your reason for moving, prepare the home, understand the numbers, and make confident decisions before the listing goes live. Kelvin also created AffordabilityIQ and AreaIQ to help buyers and sellers think more clearly about the next move.</p>
+<nav aria-label="Page sections" class="nav-list">
+<a href="#preapproval"><strong>Prepare before photos</strong><span>Small steps that help buyers see the home clearly</span></a>
+<a href="#know-your-number"><strong>Understand your equity</strong><span>How your current home can support the next move</span></a>
+<a href="#fit"><strong>Price with strategy</strong><span>Why the first impression of price matters</span></a>
+<a href="#avoid"><strong>Avoid seller mistakes</strong><span>Protect momentum from prep through closing</span></a>
+</nav>
+</aside>
+</div>
+</section>
+<section aria-labelledby="check-title" class="section section-soft" id="clarity-check">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 01</div>
+<h2 id="check-title">Where should you start?</h2>
+</div>
+<p>Answer a few quick questions and this guide will point you toward the section that may matter most right now.</p>
+</div>
+<div class="quick-check">
+<div class="quiz-panel">
+<div class="progress-row"><span id="progressText">1 of 5</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+<form id="sellerQuiz">
+<div class="question active" data-step="1">
+<h3>How clear are you on why you want to sell?</h3>
+<p>This helps separate a casual thought from a move that needs a real plan.</p>
+<div class="options">
+<label class="option"><input name="q1" type="radio" value="1"/><span><strong>Not very clear yet</strong><span>I know something may need to change, but I have not sorted it out.</span></span></label>
+<label class="option"><input name="q1" type="radio" value="2"/><span><strong>Somewhat clear</strong><span>I have a reason, but I am still weighing timing and options.</span></span></label>
+<label class="option"><input name="q1" type="radio" value="3"/><span><strong>Very clear</strong><span>I know why I want to move and what I need this sale to support.</span></span></label>
+</div>
+</div>
+<div class="question" data-step="2">
+<h3>Have you looked at your equity picture?</h3>
+<p>Your equity can shape your next-home budget, timeline, and confidence.</p>
+<div class="options">
+<label class="option"><input name="q2" type="radio" value="1"/><span><strong>No, not really</strong><span>I am not sure what the home may be worth or what I may walk away with.</span></span></label>
+<label class="option"><input name="q2" type="radio" value="2"/><span><strong>I have a rough idea</strong><span>I have checked online estimates, but I know they may not tell the whole story.</span></span></label>
+<label class="option"><input name="q2" type="radio" value="3"/><span><strong>Yes, I have started</strong><span>I am ready to connect value, payoff, costs, and the next move.</span></span></label>
+</div>
+</div>
+<div class="question" data-step="3">
+<h3>How ready is the home for buyers to see it?</h3>
+<p>The right prep helps buyers notice the home, not the distractions.</p>
+<div class="options">
+<label class="option"><input name="q3" type="radio" value="1"/><span><strong>It needs work</strong><span>There is decluttering, cleaning, repair, or curb appeal work to think through.</span></span></label>
+<label class="option"><input name="q3" type="radio" value="2"/><span><strong>It is close</strong><span>A few focused updates would help it show better.</span></span></label>
+<label class="option"><input name="q3" type="radio" value="3"/><span><strong>It is mostly ready</strong><span>I mainly need advice on what is worth doing and what is not.</span></span></label>
+</div>
+</div>
+<div class="question" data-step="4">
+<h3>How do you feel about pricing strategy?</h3>
+<p>Pricing is one of the biggest choices you make before the listing goes public.</p>
+<div class="options">
+<label class="option"><input name="q4" type="radio" value="1"/><span><strong>I am unsure</strong><span>I do not know how to balance my goal with what buyers will respond to.</span></span></label>
+<label class="option"><input name="q4" type="radio" value="2"/><span><strong>I have a number in mind</strong><span>I want to understand if it matches the market and the condition of the home.</span></span></label>
+<label class="option"><input name="q4" type="radio" value="3"/><span><strong>I want a strategy</strong><span>I am open to a clear pricing plan that helps the home launch well.</span></span></label>
+</div>
+</div>
+<div class="question" data-step="5">
+<h3>What feels most important right now?</h3>
+<p>This helps personalize the recommended starting point.</p>
+<div class="options">
+<label class="option"><input name="q5" type="radio" value="equity"/><span><strong>Knowing what I may walk away with</strong><span>Equity, payoff, costs, and the next purchase all feel connected.</span></span></label>
+<label class="option"><input name="q5" type="radio" value="prep"/><span><strong>Getting the home ready</strong><span>I want to know what to clean, fix, remove, or improve before listing.</span></span></label>
+<label class="option"><input name="q5" type="radio" value="price"/><span><strong>Choosing the right price</strong><span>I want to avoid overpricing, underpricing, or losing buyer interest.</span></span></label>
+<label class="option"><input name="q5" type="radio" value="marketing"/><span><strong>Making the home stand out</strong><span>I want the home positioned well online and in the local market.</span></span></label>
+</div>
+</div>
+</form>
+<div class="quiz-controls">
+<button class="btn btn-light" id="prevBtn" type="button">Back</button>
+<button class="btn btn-red" id="nextBtn" type="button">Keep going</button>
+</div>
+</div>
+<aside aria-live="polite" class="result-card" id="resultPanel">
+<div class="result-label">Your starting point</div>
+<h3 id="resultTitle">A clearer place to begin.</h3>
+<p id="resultCopy">Answer the questions and this guide will point you to the section that should come first.</p>
+<ul class="result-list" id="resultList"></ul>
+<div class="result-actions" id="resultActions"></div>
+</aside>
+</div>
+</div>
+</section>
+<section aria-labelledby="preapproval-title" class="section" id="preapproval">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 02</div>
+<h2 id="preapproval-title">Prepare the home before the first impression.</h2>
+</div>
+<p>Good preparation does not mean making the home perfect. It means helping buyers see the space clearly and feel confident about what they are considering.</p>
+</div>
+<div class="grid-3">
+<article class="card"><div class="icon">1</div><h3>Reduce visual noise.</h3><p>Declutter rooms, closets, counters, garage areas, and storage spaces so the home feels open and easy to understand.</p></article>
+<article class="card"><div class="icon">2</div><h3>Make care visible.</h3><p>Clean deeply, touch up paint, replace bulbs, repair what is obvious, and keep receipts for work that may help buyers feel more comfortable.</p></article>
+<article class="card"><div class="icon">3</div><h3>Start at the curb.</h3><p>Freshen the entry, tidy landscaping, wash windows, sweep walkways, and make the arrival feel cared for before a buyer steps inside.</p></article>
+</div>
+<div class="callout">
+<div class="result-label">Before photos</div>
+<h3>Do the work that helps buyers focus.</h3>
+<p>Kelvin can help you decide what is worth doing, what can be skipped, and what should be handled before the listing is photographed.</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="number-title" class="section section-soft" id="know-your-number">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 03</div>
+<h2 id="number-title">Understand your equity before you plan the move.</h2>
+</div>
+<p>Equity is the difference between what your home may sell for and what you still owe. It can help shape your next down payment, cash cushion, or timing.</p>
+</div>
+<div class="two-col">
+<div class="stack">
+<article class="lesson-card"><div class="num">01</div><div><h3>Start with the full picture.</h3><p>Online estimates can be a starting point, but they do not replace a local review of condition, neighborhood activity, buyer demand, and comparable sales.</p></div></article>
+<article class="lesson-card"><div class="num">02</div><div><h3>Subtract what still has to be paid.</h3><p>Your mortgage payoff, selling costs, possible repairs, and moving expenses all affect what you may actually carry into your next step.</p></div></article>
+<article class="lesson-card"><div class="num">03</div><div><h3>Connect the sale to the next decision.</h3><p>If you are buying again, your sale proceeds, payment comfort, timing, and next-home budget need to be looked at together.</p></div></article>
+</div>
+<aside class="side-card sticky">
+<h3>Use AffordabilityIQ if you are buying next.</h3>
+<p>AffordabilityIQ is a tool Kelvin created to help you think through your next monthly payment, cash needed, and price range before you make decisions based only on sale price.</p>
+<div class="side-actions"><a class="btn btn-red iq-link" href="https://affordabilityiq.hart-iq.com/" rel="noopener noreferrer" target="_blank">Open AffordabilityIQ</a></div>
+</aside>
+</div>
+</div>
+</section>
+<section aria-labelledby="fit-title" class="section" id="fit">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 04</div>
+<h2 id="fit-title">Price with strategy, not hope.</h2>
+</div>
+<p>The price you choose sends a message. A strong strategy helps your home launch with clarity instead of trying to recover attention later.</p>
+</div>
+<div class="two-col">
+<div class="stack fit-accordion">
+<details class="myth"><summary><span><strong>Market value is not just what you want to net.</strong><span>It is shaped by comparable sales, condition, location, buyer demand, and the homes you are competing against.</span></span></summary><div class="myth-answer">Your goal matters, but buyers respond to value. Kelvin can help you compare your goal with what the market is likely to support.</div></details>
+<details class="myth"><summary><span><strong>Overpricing can weaken momentum.</strong><span>A high launch price may reduce showings, cause buyers to wait, or make later price changes feel like a warning sign.</span></span></summary><div class="myth-answer">The first days on the market matter because that is when many serious buyers and agents are paying the closest attention.</div></details>
+<details class="myth"><summary><span><strong>Condition affects the pricing conversation.</strong><span>Updates, repairs, layout, age of systems, and buyer perception all influence how your home compares.</span></span></summary><div class="myth-answer">A smart pricing plan considers the home as it actually presents, not just the home you know and love.</div></details>
+<details class="myth"><summary><span><strong>The right price supports negotiation.</strong><span>Pricing well can create cleaner conversations around offers, inspections, appraisal, and buyer confidence.</span></span></summary><div class="myth-answer">The goal is not just to get attention. It is to attract the right buyers and keep the sale moving toward closing.</div></details>
+</div>
+<aside class="side-card sticky">
+<h3>Want a local pricing review?</h3>
+<p>When you are closer to listing, Kelvin can prepare a comparative market analysis (CMA) with recent comparable sales, active competition, condition, and buyer context.</p>
+<div class="side-actions"><a class="btn btn-red iq-link" href="https://form.jotform.com/250377590954164" rel="noopener noreferrer" target="_blank">Request a CMA</a></div>
+</aside>
+</div>
+</div>
+</section>
+<section aria-labelledby="tradeoffs-title" class="section section-soft" id="tradeoffs">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 05</div>
+<h2 id="tradeoffs-title">Market the home buyers will actually remember.</h2>
+</div>
+<p>Marketing is not just exposure. It is the way your home is presented, positioned, and understood by buyers before they decide to schedule a showing.</p>
+</div>
+<div class="tradeoff-band">
+<div>
+<span class="pill-label">At first glance</span>
+<h3>Photos, price, and location create the first decision.</h3>
+<p>Buyers are often deciding quickly whether a home feels worth their time. Clear presentation helps them slow down and pay attention.</p>
+</div>
+<div>
+<span class="pill-label">After showing</span>
+<h3>The details help buyers remember the value.</h3>
+<p>Neighborhood context, utility details, HOA information, updates, and showing condition can help the home feel easier to compare.</p>
+</div>
+</div>
+<div class="cma-inline">
+<div><strong>Want the location story to support the listing?</strong><span>AreaIQ is a tool Kelvin created to help buyers understand the area around the home, not just the rooms inside it.</span></div>
+<a class="btn btn-red iq-link" href="https://areaiq.hart-iq.com/" rel="noopener noreferrer" target="_blank">Open AreaIQ</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="process-title" class="section" id="process">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 06</div>
+<h2 id="process-title">The selling process, simplified.</h2>
+</div>
+<p>You do not need to memorize every detail. You need to understand the major moves and have the right guidance at each point.</p>
+</div>
+<div class="process-lane process-editorial">
+<div class="process-row"><span>01</span><div><strong>Plan the move</strong><p>Clarify why you are selling, where you may go next, what timeline matters, and what the sale needs to support.</p></div></div>
+<div class="process-row"><span>02</span><div><strong>Prepare the property</strong><p>Declutter, clean, repair, improve curb appeal, and decide what should happen before photos and showings.</p></div></div>
+<div class="process-row"><span>03</span><div><strong>Set the launch strategy</strong><p>Review market context, comparable sales, condition, pricing, photography, marketing, showing access, and timing.</p></div></div>
+<div class="process-row"><span>04</span><div><strong>Review offers carefully</strong><p>Look beyond price and compare terms, financing, contingencies, closing date, inspection expectations, and buyer strength.</p></div></div>
+<div class="process-row"><span>05</span><div><strong>Move from contract to closing</strong><p>Work through inspection requests, appraisal, title items, paperwork, final details, signing, and handoff of the home.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="avoid-title" class="section section-dark" id="avoid">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Step 07</div>
+<h2 id="avoid-title">Avoid the mistakes that slow a sale down.</h2>
+</div>
+<p>Most seller stress comes from unclear expectations, rushed preparation, emotional pricing, or surprises that could have been planned for earlier.</p>
+</div>
+<div class="avoid-list">
+<div class="avoid-row"><span>Before listing</span><div><strong>Do not wait until photos to start preparing.</strong><p>Decluttering, repairs, cleaning, and curb appeal are easier to handle before the listing timeline gets tight.</p></div></div>
+<div class="avoid-row"><span>At launch</span><div><strong>Do not price from emotion alone.</strong><p>Your memories matter, but buyers compare your home to what else is available and what recently sold.</p></div></div>
+<div class="avoid-row"><span>During showings</span><div><strong>Do not make access harder than it has to be.</strong><p>Reasonable showing availability can protect momentum, especially when qualified buyers are actively comparing options.</p></div></div>
+<div class="avoid-row"><span>Under contract</span><div><strong>Do not treat every request like a fight.</strong><p>Inspection and negotiation are part of the process. Kelvin can help you respond wisely without giving away more than needed.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="myths-title" class="section section-soft" id="myths">
+<div class="wrapper">
+<div class="section-head">
+<div>
+<div class="section-num">Helpful clarity</div>
+<h2 id="myths-title">Assumptions sellers should revisit.</h2>
+</div>
+<p>Selling can feel familiar if you have done it before, but every home, neighborhood, buyer pool, and next move has its own strategy.</p>
+</div>
+<div class="stack">
+<details class="myth"><summary><span><strong>“I should test the market high.”</strong><span>A high starting price can sometimes reduce the attention you need most.</span></span></summary><div class="myth-answer">A smart launch price is meant to attract serious buyers, support showings, and keep the listing from feeling stale.</div></details>
+<details class="myth"><summary><span><strong>“The buyer will see past the clutter.”</strong><span>Some buyers can, but many cannot.</span></span></summary><div class="myth-answer">Simple prep helps buyers understand the room sizes, storage, natural light, and purpose of each space.</div></details>
+<details class="myth"><summary><span><strong>“The highest offer is automatically the best offer.”</strong><span>Terms can matter just as much as price.</span></span></summary><div class="myth-answer">Financing strength, contingencies, inspection language, appraisal risk, closing timeline, and possession can all affect how strong an offer really is.</div></details>
+<details class="myth"><summary><span><strong>“I can figure out my next home after I list.”</strong><span>The sale and next move often need to be planned together.</span></span></summary><div class="myth-answer">If you are buying again, AffordabilityIQ can help you think through your next payment and Kelvin can help you coordinate timing.</div></details>
+</div>
+</div>
+</section>
+<section aria-labelledby="contact-title" class="cta" id="contact">
+<div class="wrapper">
+<div class="cta-box">
+<div>
+<div class="section-num">Ready for a clearer next step?</div>
+<h2 id="contact-title">Talk with Kelvin before the listing gets complicated.</h2>
+<p>You do not have to figure out equity, prep, pricing, marketing, offers, and timing alone. Kelvin can help you slow it down, use the tools he created, understand the next move, and sell with confidence.</p>
+<div style="display:flex; gap:10px; flex-wrap:wrap"><a class="btn btn-red" href="tel:13178338419">Call 317.833.8419</a><a class="btn btn-light" href="https://kelvinhart.fathomrealty.com" rel="noopener" target="_blank">kelvinhart.fathomrealty.com</a></div>
+</div>
+<aside class="contact-card">
+<strong>Kelvin Hart</strong>
+<span>Realtor® | Fathom Realty Indiana</span>
+<div class="contact-list">
+<a href="tel:13178338419">317.833.8419</a>
+<a href="mailto:khart@fathomrealty.com">khart@fathomrealty.com</a>
+<a href="https://kelvinhart.fathomrealty.com" rel="noopener" target="_blank">kelvinhart.fathomrealty.com</a>
+</div>
+<a class="btn btn-dark" href="mailto:khart@fathomrealty.com">Email Kelvin</a>
+</aside>
+</div>
+</div>
+</section>
+</main>
+<a aria-label="Back to top" class="back-to-top" href="#top" id="backToTop">↑</a>
+<footer>
+<div class="wrapper">© Fathom Realty. Guide prepared for Kelvin Hart, Realtor® with Fathom Realty Indiana.</div>
+</footer>
+<script>
+const questions = Array.from(document.querySelectorAll('.question'));
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+const resultTitle = document.getElementById('resultTitle');
+const resultCopy = document.getElementById('resultCopy');
+const resultList = document.getElementById('resultList');
+const resultActions = document.getElementById('resultActions');
+const backToTop = document.getElementById('backToTop');
+
+document.querySelectorAll('details').forEach(detail => detail.removeAttribute('open'));
+
+let current = 0;
+let recommendedHref = '#know-your-number';
+let resultReady = false;
+
+function showStep(index) {
+  questions.forEach((q, i) => q.classList.toggle('active', i === index));
+  progressText.textContent = `${index + 1} of ${questions.length}`;
+  progressFill.style.width = `${((index + 1) / questions.length) * 100}%`;
+  prevBtn.style.visibility = index === 0 ? 'hidden' : 'visible';
+  resultReady = false;
+  nextBtn.textContent = index === questions.length - 1 ? 'Show my starting point' : 'Keep going';
+}
+function selectedValue(name) {
+  const selected = document.querySelector(`input[name="${name}"]:checked`);
+  return selected ? selected.value : null;
+}
+function currentAnswered() {
+  const active = questions[current];
+  const input = active.querySelector('input:checked');
+  return Boolean(input);
+}
+function scrollToRecommendedSection() {
+  const target = document.querySelector(recommendedHref);
+  if (!target) return;
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function sectionButtonLabel(href) {
+  const labels = {
+    '#preapproval': 'Go to section 2',
+    '#know-your-number': 'Go to section 3',
+    '#fit': 'Go to section 4',
+    '#tradeoffs': 'Go to section 5',
+    '#process': 'Go to section 6',
+    '#avoid': 'Go to section 7'
+  };
+  return labels[href] || 'Go to recommended section';
+}
+function buildResult() {
+  document.getElementById('resultPanel')?.classList.add('has-result');
+  const scores = ['q1','q2','q3','q4'].map(selectedValue).map(v => Number(v || 0));
+  const focus = selectedValue('q5');
+  const items = [];
+  let title = 'Start with a clearer selling plan.';
+  let copy = 'A few pieces still need structure before the listing becomes serious.';
+  let href = '#process';
+
+  if (focus === 'equity') {
+    title = 'Equity and next-move clarity';
+    copy = scores[1] <= 2
+      ? 'Start by understanding what the home may support after payoff, selling costs, and your next step. AffordabilityIQ can help if you are buying again, and Kelvin can help you connect the sale to the next move.'
+      : 'You already have a starting point, so use the equity section to connect value, payoff, costs, timing, and your next move.';
+    items.push(['Suggested tool','AffordabilityIQ','https://affordabilityiq.hart-iq.com/']);
+    href = '#know-your-number';
+  } else if (focus === 'prep') {
+    title = 'Prep before presentation';
+    copy = 'Start with the visible work that helps buyers see the home clearly. The goal is not perfection. The goal is fewer distractions and a stronger first impression.';
+    items.push(['Start with','Section 2: Home preparation']);
+    href = '#preapproval';
+  } else if (focus === 'price') {
+    title = 'Pricing strategy first';
+    copy = 'Start with pricing strategy so the home launches with clarity. Kelvin can help compare your home to recent sales, active competition, condition, and the local buyer picture.';
+    items.push(['Next step','Request a CMA','https://form.jotform.com/250377590954164']);
+    href = '#fit';
+  } else if (focus === 'marketing') {
+    title = 'Prepare the home to stand out';
+    copy = 'Start with Section 2 because the home has to present well before marketing can do its job. After the prep is clear, AreaIQ can help support the location story buyers are considering.';
+    items.push(['Start with','Section 2: Home preparation']);
+    items.push(['Later tool','AreaIQ','https://areaiq.hart-iq.com/']);
+    href = '#preapproval';
+  }
+
+  if (scores[0] <= 1) {
+    items.push(['Also consider','Clarify why and when you want to move']);
+  }
+
+  resultTitle.textContent = title;
+  resultCopy.textContent = copy;
+  resultList.innerHTML = items.map(([label, value, url]) => {
+    const renderedValue = url
+      ? `<a class="result-tool-link" href="${url}" target="_blank" rel="noopener noreferrer">${value}</a>`
+      : value;
+    return `<li><strong>${label}</strong><span>${renderedValue}</span></li>`;
+  }).join('');
+  recommendedHref = href;
+  resultActions.innerHTML = '';
+  resultList.classList.add('show');
+  resultActions.classList.remove('show');
+}
+nextBtn.addEventListener('click', () => {
+  if (!currentAnswered()) {
+    const active = questions[current];
+    active.animate([{ transform:'translateX(0)' }, { transform:'translateX(-5px)' }, { transform:'translateX(5px)' }, { transform:'translateX(0)' }], { duration:220 });
+    return;
+  }
+  if (current < questions.length - 1) {
+    current += 1;
+    showStep(current);
+  } else if (!resultReady) {
+    buildResult();
+    resultReady = true;
+    nextBtn.textContent = sectionButtonLabel(recommendedHref);
+  } else {
+    scrollToRecommendedSection();
+  }
+});
+prevBtn.addEventListener('click', () => {
+  if (current > 0) {
+    current -= 1;
+    showStep(current);
+  }
+});
+document.addEventListener('change', (event) => {
+  if (event.target.matches('#sellerQuiz input') && current === questions.length - 1 && resultReady) {
+    buildResult();
+    nextBtn.textContent = sectionButtonLabel(recommendedHref);
+  }
+});
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('show', window.scrollY > 520);
+});
+document.querySelectorAll('details.myth').forEach(d => d.removeAttribute('open'));
+showStep(current);
+</script>
+</body>
+</html>
