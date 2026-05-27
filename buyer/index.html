@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="/favicon-32x32.png">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Buy Smart: A Practical Guide to Your Next Home | Kelvin Hart</title>
@@ -1786,6 +1787,295 @@ header.top img{
   .smartiq-lockup .lockup-tagline{font-size:7.5px !important;}
 }
 
+
+/* v32: keep Step 01 desktop headline on one line */
+@media (min-width: 901px) {
+  #clarity-check .section-head {
+    grid-template-columns: minmax(0, 1fr) 300px !important;
+    gap: 30px !important;
+  }
+
+  #check-title {
+    white-space: nowrap !important;
+    max-width: none !important;
+    font-size: clamp(50px, 4.55vw, 66px) !important;
+    line-height: 1.02 !important;
+  }
+
+  #clarity-check .section-head > p {
+    max-width: 300px !important;
+    padding-top: 8px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1120px) {
+  #check-title {
+    font-size: clamp(44px, 4.9vw, 54px) !important;
+  }
+}
+
+
+/* v33: mobile/tablet clarity-check layout repair only */
+@media (max-width: 900px) {
+  #clarity-check .section-head {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  #clarity-check .section-head > div,
+  #clarity-check .section-head > p {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #check-title {
+    white-space: normal !important;
+    max-width: 100% !important;
+    font-size: clamp(36px, 9.5vw, 50px) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -.035em !important;
+  }
+
+  #clarity-check .section-head > p {
+    padding-top: 0 !important;
+    transform: none !important;
+    font-size: 15.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  #clarity-check .quick-check {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    overflow: visible !important;
+  }
+
+  #clarity-check .quiz-panel,
+  #clarity-check .result-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #clarity-check .result-card:not(.has-result) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #check-title {
+    font-size: clamp(32px, 10vw, 40px) !important;
+  }
+}
+
+
+/* v34: desktop-only headline balance for long guide section titles */
+@media (min-width: 901px) {
+  #number-title,
+  #fit-title,
+  #myths-title {
+    font-size: clamp(54px, 5.1vw, 82px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.035em !important;
+    max-width: 1220px !important;
+  }
+
+  #number-title {
+    max-width: 1160px !important;
+  }
+
+  #fit-title {
+    white-space: nowrap !important;
+    max-width: none !important;
+    font-size: clamp(54px, 5vw, 78px) !important;
+  }
+
+  #myths-title {
+    max-width: 1040px !important;
+  }
+
+  #number-title .desktop-keep {
+    white-space: nowrap !important;
+  }
+}
+
+
+/* v35: desktop headline balance and overlap repair */
+@media (min-width: 901px) {
+  #know-your-number .section-head,
+  #fit .section-head {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 360px !important;
+    gap: 44px !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  #know-your-number .section-head > div,
+  #fit .section-head > div {
+    min-width: 0 !important;
+  }
+
+  #know-your-number .section-head > p,
+  #fit .section-head > p {
+    max-width: 360px !important;
+    padding-top: 22px !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  #number-title {
+    font-size: clamp(48px, 4.25vw, 70px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.035em !important;
+    max-width: 1080px !important;
+    white-space: normal !important;
+  }
+
+  #number-title .desktop-keep {
+    white-space: nowrap !important;
+  }
+
+  #fit-title {
+    font-size: clamp(48px, 4.1vw, 66px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.035em !important;
+    max-width: none !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  #know-your-number .section-head,
+  #fit .section-head {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  #know-your-number .section-head > p,
+  #fit .section-head > p {
+    max-width: 620px !important;
+    padding-top: 0 !important;
+  }
+
+  #number-title,
+  #fit-title {
+    white-space: normal !important;
+    font-size: clamp(44px, 5.2vw, 58px) !important;
+  }
+}
+
+
+/* v36: desktop headline wrapping and overlap repair */
+@media (min-width: 1201px) {
+  #know-your-number .section-head,
+  #preapproval .section-head,
+  #fit .section-head {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 430px !important;
+    gap: 56px !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  #know-your-number .section-head > div,
+  #preapproval .section-head > div,
+  #fit .section-head > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #know-your-number .section-head > p,
+  #preapproval .section-head > p,
+  #fit .section-head > p {
+    max-width: 430px !important;
+    padding-top: 18px !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 3 !important;
+  }
+
+  #number-title,
+  #preapproval-title,
+  #fit-title {
+    font-size: clamp(48px, 3.85vw, 64px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.034em !important;
+    max-width: 980px !important;
+    white-space: normal !important;
+  }
+
+  #fit-title {
+    max-width: 1080px !important;
+  }
+
+  #number-title .desktop-keep {
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  #number-title,
+  #preapproval-title,
+  #fit-title {
+    font-size: clamp(42px, 5vw, 56px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.032em !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+
+  #number-title .desktop-keep {
+    white-space: normal !important;
+  }
+}
+
+
+/* v37: desktop-only phrase keeps for cleaner headline/question wrapping */
+@media (min-width: 901px) {
+  .desktop-phrase {
+    white-space: nowrap !important;
+  }
+}
+@media (max-width: 900px) {
+  .desktop-phrase {
+    white-space: normal !important;
+  }
+}
+
+
+/* v38: mobile-only phrase keeps for IQ side-card headings */
+@media (max-width: 700px) {
+  .side-card h3 .mobile-keep {
+    white-space: nowrap !important;
+  }
+}
+
+
+/* v39: make desktop Tools/Guides dropdowns open reliably on hover */
+@media (min-width: 901px) {
+  .nav-dropdown.is-hover-open .nav-drop-trigger,
+  .nav-dropdown:hover .nav-drop-trigger {
+    color: #c40000 !important;
+  }
+
+  .nav-dropdown.is-hover-open .nav-drop-menu,
+  .nav-dropdown:hover .nav-drop-menu {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+  }
+
+  .nav-dropdown:focus-within .nav-drop-menu {
+    pointer-events: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1923,7 +2213,7 @@ header.top img{
           <div class="progress-row"><span id="progressText">1 of 5</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
           <form id="buyerQuiz">
             <div class="question active" data-step="1">
-              <h3>What has changed since your last purchase?</h3>
+              <h3>What has changed since your <span class="desktop-phrase">last purchase</span>?</h3>
               <p>Your next home should be based on this season, not the assumptions from the last time you bought.</p>
               <div class="options">
                 <label class="option"><input type="radio" name="q1" value="3"><span><strong>I have updated the full picture</strong><span>Income, debt, savings, payment comfort, timing, and priorities are current.</span></span></label>
@@ -1989,7 +2279,7 @@ header.top img{
       <div class="section-head">
         <div>
           <div class="section-num">Step 02</div>
-          <h2 id="number-title">Understand affordability before you fall in love with a home.</h2>
+          <h2 id="number-title">Understand affordability before you fall in love with <span class="desktop-phrase">a home.</span></h2>
         </div>
         <p>Affordability is more than a price range. It is the full monthly picture and the comfort level you can live with after closing.</p>
       </div>
@@ -2000,7 +2290,7 @@ header.top img{
           <div class="lesson-card"><div class="num">03</div><div><h3>Think about cash needed to close.</h3><p>Your down payment is only part of the picture. Closing costs, inspections, moving costs, and reserves should be part of the plan.</p></div></div>
         </div>
         <aside class="side-card sticky">
-          <h3>Use AffordabilityIQ to clarify affordability.</h3>
+          <h3>Use AffordabilityIQ to <span class="mobile-keep">clarify affordability.</span></h3>
           <p>Before the search gets emotional, use AffordabilityIQ to test payment comfort, cash needed, taxes, insurance, HOA dues, and maintenance. Then Kelvin can help you connect that full monthly picture to homes and neighborhoods that make sense.</p>
           <div class="side-actions">
             <a class="btn btn-red iq-link" href="http://affordabilityiq.smartiqbyhart.com/" target="_blank" rel="noopener noreferrer">Open AffordabilityIQ</a>
@@ -2016,7 +2306,7 @@ header.top img{
       <div class="section-head">
         <div>
           <div class="section-num">Step 03</div>
-          <h2 id="preapproval-title">Pre-approval comes before showings.</h2>
+          <h2 id="preapproval-title">Pre-approval comes <span class="desktop-phrase">before showings.</span></h2>
         </div>
         <p>This is one of the clearest ways to protect your time, your emotions, and your negotiating position.</p>
       </div>
@@ -2038,7 +2328,7 @@ header.top img{
       <div class="section-head">
         <div>
           <div class="section-num">Step 04</div>
-          <h2 id="fit-title">Define the life you are buying for.</h2>
+          <h2 id="fit-title">Define the life you are <span class="desktop-phrase">buying for.</span></h2>
         </div>
         <p>The right home is not just the one with the best photos. It is the one that supports your daily life, future plans, and comfort level.</p>
       </div>
@@ -2050,7 +2340,7 @@ header.top img{
           <details class="myth"><summary><span><strong>Future flexibility</strong><span>Household changes, aging needs, work patterns, resale, and how long this home needs to serve you.</span></span></summary><div class="myth-answer">You cannot predict everything, but you can choose with wisdom about what may matter over the next few years.</div></details>
         </div>
         <aside class="side-card sticky">
-          <h3>Use AreaIQ to think beyond the house.</h3>
+          <h3>Use AreaIQ to think beyond <span class="mobile-keep">the house.</span></h3>
           <p>AreaIQ helps you compare the areas around the home, including lifestyle fit, daily rhythm, convenience, and long-term usability before narrowing the search too quickly.</p>
           <div class="side-actions"><a class="btn btn-red iq-link" href="http://areaiq.smartiqbyhart.com/" target="_blank" rel="noopener noreferrer">Open AreaIQ</a></div>
         </aside>
@@ -2359,15 +2649,199 @@ showStep(current);
 (function(){
   const dropdowns = document.querySelectorAll(".nav-dropdown");
   dropdowns.forEach(function(drop){
+    const trigger = drop.querySelector(".nav-drop-trigger");
+    const menu = drop.querySelector(".nav-drop-menu");
+    if(!trigger || !menu) return;
+
+    function openMenu(){
+      drop.classList.add("is-hover-open");
+      trigger.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu(){
+      drop.classList.remove("is-hover-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+
     drop.addEventListener("mouseenter", function(){
       const active = document.activeElement;
       if(active && active.classList && active.classList.contains("nav-drop-trigger") && !drop.contains(active)){
         active.blur();
       }
+      openMenu();
+    });
+
+    drop.addEventListener("mouseleave", closeMenu);
+
+    trigger.addEventListener("click", function(event){
+      event.preventDefault();
+      if(drop.classList.contains("is-hover-open")){
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function(event){
+      if(event.key === "Escape") closeMenu();
     });
   });
 })();
 </script>
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 1 — Paste inside <head>
+     All CSS variables are resolved to literal values so this works
+     in any site without the AffordabilityIQ stylesheet.
+     ═══════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Chatbot button pulse ──────────────────────────────────────── */
+  @keyframes chatPulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(200,16,46,.55), 0 4px 14px rgba(0,0,0,.18); }
+    70%      { box-shadow: 0 0 0 18px rgba(200,16,46,0), 0 4px 14px rgba(0,0,0,.18); }
+  }
+  [class*="embedded-agent-button"],
+  .embedded-agent-button,
+  #JotformAgent-019438e2115c7445a4fb44e560c787d8bc5a button {
+    animation: chatPulse 2.2s ease-out infinite !important;
+  }
 
+  /* ── Chat nudge tooltip ────────────────────────────────────────── */
+  .chat-nudge {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    background: #FFFFFF;
+    color: #1A0808;
+    border: 2px solid #A30D25;
+    border-radius: 12px;
+    padding: 11px 30px 11px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    z-index: 9998;
+    max-width: 240px;
+    line-height: 1.4;
+    animation: nudgeIn .5s cubic-bezier(.2,.9,.3,1.2) both;
+  }
+  .chat-nudge.hidden { display: none; }
+  .chat-nudge strong { color: #7F0A1C; }
+
+  /* Arrow pointer (bottom-right of tooltip, pointing toward chat button) */
+  .chat-nudge-arrow {
+    position: absolute;
+    bottom: -8px;
+    right: 24px;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-right: 2px solid #C8102E;
+    border-bottom: 2px solid #C8102E;
+    transform: rotate(45deg);
+  }
+
+  /* Dismiss × button */
+  .chat-nudge-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    color: #756363;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .chat-nudge-close:hover { color: #C8102E; background: #F1EEEE; }
+
+  @keyframes nudgeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive overrides ──────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .chat-nudge { bottom: 92px; right: 12px; max-width: 188px; }
+  }
+  @media (max-width: 520px) {
+    .chat-nudge { right: 16px; bottom: 86px; max-width: 200px; font-size: 12px; }
+  }
+</style>
+
+
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 3 — Paste just before </body>
+     JotForm AI chatbot embed (loads the floating chat button)
+     Agent ID: 019438e2115c7445a4fb44e560c787d8bc5a
+     ═══════════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jotfor.ms/agent/embedjs/019438e2115c7445a4fb44e560c787d8bc5a/embed.js"></script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 4 — Paste just before </body>, AFTER step 3
+     Chat nudge logic + auto-close guard
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+  // ── Show nudge tooltip ──────────────────────────────────────────────────────
+  // Appears after a 4-second delay, auto-dismisses after 12 seconds.
+  // Respects sessionStorage so it only shows once per browser session.
+  // Call showChatNudge() manually from any event (e.g. form submit) if needed.
+  function showChatNudge() {
+    const nudge = document.getElementById('chat-nudge');
+    if (!nudge) return;
+    try { if (sessionStorage.getItem('chatNudgeDismissed') === '1') return; } catch(e) {}
+    setTimeout(function() {
+      nudge.classList.remove('hidden');
+      setTimeout(function() {
+        if (nudge && !nudge.classList.contains('hidden')) {
+          nudge.style.transition = 'opacity .4s ease';
+          nudge.style.opacity = '0';
+          setTimeout(function() {
+            nudge.classList.add('hidden');
+            nudge.style.opacity = '';
+          }, 420);
+        }
+      }, 12000);
+    }, 4000);
+  }
+
+  // ── Dismiss nudge tooltip ───────────────────────────────────────────────────
+  function dismissChatNudge() {
+    const nudge = document.getElementById('chat-nudge');
+    if (nudge) nudge.classList.add('hidden');
+    try { sessionStorage.setItem('chatNudgeDismissed', '1'); } catch(e) {}
+  }
+
+  // ── Prevent chatbot auto-opening on page load ───────────────────────────────
+  // JotForm sometimes auto-opens the chat window; this closes it silently.
+  (function() {
+    function closeAgentIfOpen() {
+      var windows = document.querySelectorAll(
+        '[class*="embedded-agent-window"], [class*="agent-window"], [class*="chat-window"]'
+      );
+      windows.forEach(function(el) {
+        if (el.offsetHeight > 50) {
+          var closeBtn = el.querySelector('button') ||
+            document.querySelector('[class*="embedded-agent-button"] button');
+          if (closeBtn) closeBtn.click();
+        }
+      });
+    }
+    window.addEventListener('load', function() {
+      setTimeout(closeAgentIfOpen, 1000);
+      setTimeout(closeAgentIfOpen, 2500);
+    });
+  })();
+
+  // ── Auto-fire nudge on page load ────────────────────────────────────────────
+  // Remove or comment this line if you want to trigger it manually instead.
+  showChatNudge();
+</script>
 </body>
 </html>
