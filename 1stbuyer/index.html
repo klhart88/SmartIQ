@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="/favicon-32x32.png">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>First-Time Buyer Roadmap | Kelvin Hart</title>
@@ -1144,6 +1145,40 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
 @media(max-width:620px){.wrap{width:calc(100% - 28px);}.top .nav{height:68px;}.mobile-menu{left:-2px;right:-2px;}.mobile-contact-grid{grid-template-columns:1fr;}}
 @media(max-width:390px){.top .smartiq-lockup .lockup-by{display:none!important;}.top .smartiq-lockup .lockup-tagline{font-size:7.5px!important;}}
 
+
+
+/* v22: requested no-break phrase controls */
+.keep-together-all { white-space: nowrap; }
+@media (min-width: 901px) {
+  .keep-together-desktop { white-space: nowrap; }
+}
+@media (max-width: 900px) {
+  .keep-together-mobile { white-space: nowrap; }
+}
+
+
+/* v23: wrap cleanup from desktop/mobile review */
+.keep-many-buyers { white-space: nowrap; }
+.keep-happens-next { white-space: nowrap; }
+@media (min-width: 901px) {
+  .process-lane .lane-head > div:first-child { flex: 0 0 520px; }
+  .process-lane .lane-head h3 { max-width: none; }
+}
+@media (max-width: 900px) {
+  .keep-happens-next { white-space: normal; }
+}
+
+
+
+/* v24 desktop wrap fix: keep “offer to closing” together in Step 05 heading */
+.keep-offer-to-closing { white-space: nowrap; }
+@media (min-width: 901px) {
+  #process .section-head h2 { max-width: 980px; }
+}
+@media (max-width: 760px) {
+  .keep-offer-to-closing { white-space: normal; }
+}
+
 </style>
 </head>
 <body>
@@ -1267,7 +1302,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
       <div class="section-head">
         <div>
           <div class="section-num">Step 01</div>
-          <h2>Begin with a quick reality check.</h2>
+          <h2>Begin with a quick <span class="keep-together-all">reality&nbsp;check</span>.</h2>
         </div>
         <p>This is not a loan application. It simply helps you see what to talk through with Kelvin first.</p>
       </div>
@@ -1275,7 +1310,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
         <div class="quiz-panel">
           <div class="progress-row"><span id="progressText">Question 1 of 5</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
           <div class="question active" data-question="timeline">
-            <h3>How soon do you want to buy?</h3>
+            <h3>How soon do you want <span class="keep-together-all">to&nbsp;buy</span>?</h3>
             <p>Your timing shapes how quickly you should move toward pre-approval and home search prep.</p>
             <div class="options">
               <label class="option"><input type="radio" name="timeline" value="Soon"><span><strong>As soon as I can</strong><span>I want to understand what is realistic now.</span></span></label>
@@ -1316,7 +1351,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
             <div class="options">
               <label class="option"><input type="radio" name="support" value="Pre-approval"><span><strong>Getting pre-approved</strong><span>I need to understand lender steps and documents.</span></span></label>
               <label class="option"><input type="radio" name="support" value="Offers"><span><strong>Making a strong offer</strong><span>I want to understand price, terms, and strategy.</span></span></label>
-              <label class="option"><input type="radio" name="support" value="Closing"><span><strong>Contract to closing</strong><span>I want to know what happens after an offer is accepted.</span></span></label>
+              <label class="option"><input type="radio" name="support" value="Closing"><span><strong>Contract <span class="keep-together-mobile">to&nbsp;closing</span></strong><span>I want to know what happens after an offer is accepted.</span></span></label>
             </div>
           </div>
           <div class="quiz-controls">
@@ -1380,7 +1415,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
         <div>
           <div class="lesson-stack">
             <article class="lesson-card"><div class="num">01</div><div><h3>Student loans do not automatically end the conversation.</h3><p>Lenders look at your full picture, including income, debt, payment history, and the type of loan. Do not assume you are disqualified before you ask.</p></div></article>
-            <article class="lesson-card"><div class="num">02</div><div><h3>The 20% down payment rule is a myth for many buyers.</h3><p>Some loan programs allow lower down payments. The right question is what you qualify for, what you can sustain, and what keeps your cash position healthy.</p></div></article>
+            <article class="lesson-card"><div class="num">02</div><div><h3>The 20% down payment rule is a myth for <span class="keep-many-buyers">many&nbsp;buyers</span>.</h3><p>Some loan programs allow lower down payments. The right question is what you qualify for, what you can sustain, and what keeps your cash position healthy.</p></div></article>
             <article class="lesson-card"><div class="num">03</div><div><h3>Credit and savings are preparation items, not shame items.</h3><p>Payment history, available savings, and current debt all matter. Kelvin can help you understand what to ask a lender and what to steady before you apply.</p></div></article>
             <article class="lesson-card"><div class="num">04</div><div><h3>Affordability is about a comfortable life, not just a loan approval.</h3><p>Your number should leave room for utilities, maintenance, savings, groceries, giving, travel, and the life you still want to live after closing.</p></div></article>
           </div>
@@ -1424,7 +1459,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
           <details class="fit-item"><summary><div><strong>Must-haves and nice-to-haves</strong><span>Keep your list clear so you do not get distracted by features that do not serve your priorities.</span></div></summary><div class="fit-answer"><ul><li>Must-have: needed for life, budget, safety, or function.</li><li>Nice-to-have: helpful, but not worth losing the right home over.</li><li>Deal breaker: something you already know you cannot live with.</li></ul></div></details>
         </div>
         <aside class="side-card">
-          <h3>Use AreaIQ before you fall in love with a listing.</h3>
+          <h3>Use AreaIQ before <span class="keep-together-desktop">you&nbsp;fall</span> in love with <span class="keep-together-desktop">a&nbsp;listing</span>.</h3>
           <p>AreaIQ can help you look beyond photos and think about the area, lifestyle fit, and whether the location supports your next chapter.</p>
           <div class="side-actions"><a class="btn btn-red iq-link" href="http://areaiq.smartiqbyhart.com/" target="_blank" rel="noopener noreferrer" data-iq-url="http://areaiq.smartiqbyhart.com/">Open AreaIQ</a></div>
         </aside>
@@ -1437,17 +1472,17 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
       <div class="section-head">
         <div>
           <div class="section-num">Step 05</div>
-          <h2>Know the path from offer to closing.</h2>
+          <h2>Know the path from <span class="keep-offer-to-closing">offer&nbsp;to&nbsp;closing.</span></h2>
         </div>
         <p>The process feels less intimidating when you understand the order of steps and who is guiding each part.</p>
       </div>
       <div class="steps-grid">
-        <article class="step-card"><div class="step-kicker">Before touring</div><h3>Pre-approval and search setup</h3><p>Get financing clarity first, then narrow preferred areas, home fit, timeline, and the type of offer strategy that may be needed.</p></article>
+        <article class="step-card"><div class="step-kicker">Before touring</div><h3>Pre-approval and <span class="keep-together-desktop">search&nbsp;setup</span></h3><p>Get financing clarity first, then narrow preferred areas, home fit, timeline, and the type of offer strategy that may be needed.</p></article>
         <article class="step-card"><div class="step-kicker">When you find it</div><h3>Offer strategy</h3><p>Kelvin helps you think through price, terms, contingencies, timing, and what makes the offer clean and competitive.</p></article>
-        <article class="step-card"><div class="step-kicker">After acceptance</div><h3>Contract to closing</h3><p>The lender, title company, inspector, appraiser, insurance provider, and Kelvin all move their parts toward closing day.</p></article>
+        <article class="step-card"><div class="step-kicker">After acceptance</div><h3>Contract <span class="keep-together-mobile">to&nbsp;closing</span></h3><p>The lender, title company, inspector, appraiser, insurance provider, and Kelvin all move their parts toward closing day.</p></article>
       </div>
       <div class="process-lane">
-        <div class="lane-head"><div><div class="result-label">Contract to closing</div><h3>What typically happens next</h3></div><p>Each transaction is different, but these are the major checkpoints buyers usually need to be ready for.</p></div>
+        <div class="lane-head"><div><div class="result-label">Contract <span class="keep-together-mobile">to&nbsp;closing</span></div><h3>What typically <span class="keep-happens-next">happens&nbsp;next</span></h3></div><p>Each transaction is different, but these are the major checkpoints buyers usually need to be ready for.</p></div>
         <div class="lane-steps">
           <div class="lane-step"><strong>Inspection</strong><span>Review condition, repairs, safety concerns, and possible negotiations.</span></div>
           <div class="lane-step"><strong>Appraisal</strong><span>The lender confirms value for the loan. If value comes in low, strategy matters.</span></div>
@@ -1694,6 +1729,161 @@ function updateBackToTop() {
 }
 window.addEventListener('scroll', updateBackToTop, { passive: true });
 updateBackToTop();
+</script>
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 1 — Paste inside <head>
+     All CSS variables are resolved to literal values so this works
+     in any site without the AffordabilityIQ stylesheet.
+     ═══════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Chatbot button pulse ──────────────────────────────────────── */
+  @keyframes chatPulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(200,16,46,.55), 0 4px 14px rgba(0,0,0,.18); }
+    70%      { box-shadow: 0 0 0 18px rgba(200,16,46,0), 0 4px 14px rgba(0,0,0,.18); }
+  }
+  [class*="embedded-agent-button"],
+  .embedded-agent-button,
+  #JotformAgent-019438e2115c7445a4fb44e560c787d8bc5a button {
+    animation: chatPulse 2.2s ease-out infinite !important;
+  }
+
+  /* ── Chat nudge tooltip ────────────────────────────────────────── */
+  .chat-nudge {
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    background: #FFFFFF;
+    color: #1A0808;
+    border: 2px solid #A30D25;
+    border-radius: 12px;
+    padding: 11px 30px 11px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    z-index: 9998;
+    max-width: 240px;
+    line-height: 1.4;
+    animation: nudgeIn .5s cubic-bezier(.2,.9,.3,1.2) both;
+  }
+  .chat-nudge.hidden { display: none; }
+  .chat-nudge strong { color: #7F0A1C; }
+
+  /* Arrow pointer (bottom-right of tooltip, pointing toward chat button) */
+  .chat-nudge-arrow {
+    position: absolute;
+    bottom: -8px;
+    right: 24px;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-right: 2px solid #C8102E;
+    border-bottom: 2px solid #C8102E;
+    transform: rotate(45deg);
+  }
+
+  /* Dismiss × button */
+  .chat-nudge-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+    color: #756363;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .chat-nudge-close:hover { color: #C8102E; background: #F1EEEE; }
+
+  @keyframes nudgeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive overrides ──────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .chat-nudge { bottom: 92px; right: 12px; max-width: 188px; }
+  }
+  @media (max-width: 520px) {
+    .chat-nudge { right: 16px; bottom: 86px; max-width: 200px; font-size: 12px; }
+  }
+</style>
+
+
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 3 — Paste just before </body>
+     JotForm AI chatbot embed (loads the floating chat button)
+     Agent ID: 019438e2115c7445a4fb44e560c787d8bc5a
+     ═══════════════════════════════════════════════════════════════ -->
+<script src="https://cdn.jotfor.ms/agent/embedjs/019438e2115c7445a4fb44e560c787d8bc5a/embed.js"></script>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STEP 4 — Paste just before </body>, AFTER step 3
+     Chat nudge logic + auto-close guard
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+  // ── Show nudge tooltip ──────────────────────────────────────────────────────
+  // Appears after a 4-second delay, auto-dismisses after 12 seconds.
+  // Respects sessionStorage so it only shows once per browser session.
+  // Call showChatNudge() manually from any event (e.g. form submit) if needed.
+  function showChatNudge() {
+    const nudge = document.getElementById('chat-nudge');
+    if (!nudge) return;
+    try { if (sessionStorage.getItem('chatNudgeDismissed') === '1') return; } catch(e) {}
+    setTimeout(function() {
+      nudge.classList.remove('hidden');
+      setTimeout(function() {
+        if (nudge && !nudge.classList.contains('hidden')) {
+          nudge.style.transition = 'opacity .4s ease';
+          nudge.style.opacity = '0';
+          setTimeout(function() {
+            nudge.classList.add('hidden');
+            nudge.style.opacity = '';
+          }, 420);
+        }
+      }, 12000);
+    }, 4000);
+  }
+
+  // ── Dismiss nudge tooltip ───────────────────────────────────────────────────
+  function dismissChatNudge() {
+    const nudge = document.getElementById('chat-nudge');
+    if (nudge) nudge.classList.add('hidden');
+    try { sessionStorage.setItem('chatNudgeDismissed', '1'); } catch(e) {}
+  }
+
+  // ── Prevent chatbot auto-opening on page load ───────────────────────────────
+  // JotForm sometimes auto-opens the chat window; this closes it silently.
+  (function() {
+    function closeAgentIfOpen() {
+      var windows = document.querySelectorAll(
+        '[class*="embedded-agent-window"], [class*="agent-window"], [class*="chat-window"]'
+      );
+      windows.forEach(function(el) {
+        if (el.offsetHeight > 50) {
+          var closeBtn = el.querySelector('button') ||
+            document.querySelector('[class*="embedded-agent-button"] button');
+          if (closeBtn) closeBtn.click();
+        }
+      });
+    }
+    window.addEventListener('load', function() {
+      setTimeout(closeAgentIfOpen, 1000);
+      setTimeout(closeAgentIfOpen, 2500);
+    });
+  })();
+
+  // ── Auto-fire nudge on page load ────────────────────────────────────────────
+  // Remove or comment this line if you want to trigger it manually instead.
+  showChatNudge();
 </script>
 </body>
 </html>
