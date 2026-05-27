@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon-32x32.png">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Buy Smart: A Practical Guide to Your Next Home | Kelvin Hart</title>
@@ -2076,6 +2075,112 @@ header.top img{
   }
 }
 
+
+/* v41: Step 02 headline update and controlled line breaks */
+@media (min-width: 901px) {
+  #number-title .desktop-title-line {
+    display: block !important;
+  }
+
+  #number-title .phrase-keep {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #number-title .desktop-title-line {
+    display: inline !important;
+  }
+
+  #number-title .phrase-keep {
+    white-space: nowrap !important;
+  }
+}
+
+
+/* v42: Step 02 headline flow fix, desktop balanced and mobile preserved */
+@media (min-width: 901px) {
+  #know-your-number .section-head {
+    grid-template-columns: minmax(0, 1.65fr) minmax(300px, .75fr) !important;
+    align-items: start !important;
+    column-gap: clamp(36px, 5vw, 84px) !important;
+  }
+
+  #number-title {
+    font-size: clamp(54px, 5vw, 76px) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+    max-width: 12.5em !important;
+    white-space: normal !important;
+  }
+
+  #number-title .step2-line {
+    display: block !important;
+  }
+
+  #number-title .step2-keep {
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  #number-title {
+    font-size: clamp(46px, 4.7vw, 58px) !important;
+    max-width: 12.75em !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #number-title .step2-line {
+    display: inline !important;
+  }
+
+  #number-title .step2-keep {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 520px) {
+  #number-title {
+    font-size: clamp(39px, 11vw, 54px) !important;
+    line-height: 1.02 !important;
+  }
+}
+
+
+/* v43: Step 02 headline flow cleanup */
+@media (min-width: 901px) {
+  #number-title {
+    font-size: clamp(52px, 4.55vw, 70px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -.044em !important;
+    max-width: 13.9em !important;
+    white-space: normal !important;
+  }
+
+  #number-title .step2-line,
+  #number-title .step2-keep {
+    display: inline !important;
+    white-space: normal !important;
+  }
+
+  #number-title .step2-home-keep {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #number-title .step2-line,
+  #number-title .step2-keep {
+    display: inline !important;
+    white-space: normal !important;
+  }
+
+  #number-title .step2-home-keep {
+    white-space: nowrap !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2279,7 +2384,7 @@ header.top img{
       <div class="section-head">
         <div>
           <div class="section-num">Step 02</div>
-          <h2 id="number-title">Understand what you can afford before you fall in love with a home.</span></h2>
+          <h2 id="number-title">Understand what you can afford before you fall in love with <span class="step2-home-keep">a home.</span></h2>
         </div>
         <p>Affordability is more than a price range. It is the full monthly picture and the comfort level you can live with after closing.</p>
       </div>
@@ -2843,5 +2948,6 @@ showStep(current);
   // Remove or comment this line if you want to trigger it manually instead.
   showChatNudge();
 </script>
+
 </body>
 </html>
