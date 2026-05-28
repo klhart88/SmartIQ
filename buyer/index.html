@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="/favicon-32x32.png">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Buy Smart: A Practical Guide to Your Next Home | Kelvin Hart</title>
@@ -2182,6 +2181,953 @@ header.top img{
   }
 }
 
+
+
+/* === Approved SmartIQ header component v2 CSS === */
+/* SmartIQ approved header component v2
+   Mobile-menu-safe, page-proof header styles.
+   Load this file AFTER the page's existing CSS.
+*/
+
+:root {
+  --smartiq-red: #c40000;
+  --smartiq-ink: #10151f;
+  --smartiq-muted: #6b7280;
+  --smartiq-line: rgba(17, 24, 39, 0.10);
+  --smartiq-soft: #f7f7f8;
+  --smartiq-white: #ffffff;
+}
+
+/* Header shell */
+header.top {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+  background: rgba(255,255,255,.94) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(17,24,39,.08) !important;
+  box-sizing: border-box !important;
+}
+
+header.top *,
+header.top *::before,
+header.top *::after {
+  box-sizing: border-box !important;
+}
+
+header.top .nav,
+header.top .wrap.nav {
+  width: 100% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 16px 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  position: relative !important;
+  min-height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* Logo / wordmark */
+header.top .logo,
+header.top .smartiq-lockup {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: var(--smartiq-ink) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex: 0 0 auto !important;
+}
+
+header.top .lockup-mark {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+  display: block !important;
+  flex: 0 0 34px !important;
+}
+
+header.top .lockup-text {
+  display: grid !important;
+  gap: 1px !important;
+  line-height: 1 !important;
+}
+
+header.top .lockup-main {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 0 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+header.top .lockup-smart,
+header.top .lockup-iq {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: var(--smartiq-ink) !important;
+}
+
+header.top .lockup-smart {
+  color: var(--smartiq-red) !important;
+}
+
+header.top .lockup-by {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #6b7280 !important;
+  margin-left: 2px !important;
+  letter-spacing: -0.01em !important;
+}
+
+header.top .lockup-tagline {
+  font-size: 10px !important;
+  font-weight: 650 !important;
+  color: var(--smartiq-muted) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  line-height: 1.15 !important;
+}
+
+/* Desktop navigation */
+header.top .nav-links.desktop-nav.simple-dropdown-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 30px !important;
+  margin-left: auto !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+header.top .nav-links.desktop-nav.simple-dropdown-nav > a,
+header.top .nav-drop-trigger,
+header.top .header-contact {
+  appearance: none !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #242b36 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 560 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  padding: 11px 0 !important;
+}
+
+header.top .nav-links.desktop-nav.simple-dropdown-nav > a:hover,
+header.top .nav-links.desktop-nav.simple-dropdown-nav > a:focus,
+header.top .nav-drop-trigger:hover,
+header.top .nav-dropdown:hover .nav-drop-trigger,
+header.top .header-contact:hover,
+header.top .header-contact-menu.contact-open .header-contact {
+  color: var(--smartiq-red) !important;
+}
+
+header.top .nav-drop-trigger::after,
+header.top .header-contact::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-right: 1.5px solid currentColor !important;
+  border-bottom: 1.5px solid currentColor !important;
+  transform: rotate(45deg) translateY(-2px) !important;
+  margin-left: 8px !important;
+  opacity: .68 !important;
+  vertical-align: 0.12em !important;
+}
+
+header.top .nav-drop-trigger:focus,
+header.top .header-contact:focus,
+header.top .mobile-menu-toggle:focus {
+  outline: none !important;
+}
+
+header.top .nav-drop-trigger:focus-visible,
+header.top .header-contact:focus-visible,
+header.top .mobile-menu-toggle:focus-visible,
+header.top .mobile-menu a:focus-visible {
+  outline: 2px solid rgba(196,0,0,.25) !important;
+  outline-offset: 4px !important;
+  border-radius: 8px !important;
+}
+
+/* Dropdowns */
+header.top .nav-dropdown,
+header.top .header-contact-menu {
+  position: relative !important;
+  flex: 0 0 auto !important;
+}
+
+@media (min-width: 901px) {
+  header.top .nav-dropdown {
+    padding-bottom: 14px !important;
+    margin-bottom: -14px !important;
+  }
+
+  header.top .nav-dropdown::after {
+    content: "" !important;
+    position: absolute !important;
+    left: -14px !important;
+    right: -14px !important;
+    top: 100% !important;
+    height: 18px !important;
+    background: transparent !important;
+  }
+}
+
+header.top .nav-drop-menu {
+  position: absolute !important;
+  top: calc(100% + 2px) !important;
+  left: 50% !important;
+  transform: translate(-50%, 6px) !important;
+  min-width: 220px !important;
+  padding: 8px !important;
+  display: grid !important;
+  gap: 2px !important;
+  background: #fff !important;
+  border: 1px solid rgba(17,24,39,.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 18px 40px rgba(17,24,39,.12), 0 2px 8px rgba(17,24,39,.05) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease !important;
+  z-index: 10000 !important;
+}
+
+header.top .nav-dropdown:hover .nav-drop-menu,
+header.top .nav-dropdown:focus-within .nav-drop-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translate(-50%, 0) !important;
+}
+
+header.top .nav-drop-menu a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 11px !important;
+  border-radius: 8px !important;
+  color: #111827 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 550 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  background: transparent !important;
+}
+
+header.top .nav-drop-menu a:hover,
+header.top .nav-drop-menu a:focus {
+  background: #f6f5f2 !important;
+  color: var(--smartiq-red) !important;
+}
+
+/* Contact dropdown */
+header.top .header-contact-menu .contact-options {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  min-width: 315px !important;
+  width: 315px !important;
+  background: #fff !important;
+  border: 1px solid rgba(17,24,39,.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 16px 36px rgba(17,24,39,.11), 0 2px 8px rgba(17,24,39,.04) !important;
+  padding: 8px !important;
+  display: grid !important;
+  gap: 3px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(6px) !important;
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease !important;
+  z-index: 10000 !important;
+}
+
+header.top .header-contact-menu .contact-options.is-open,
+header.top .header-contact-menu.contact-open .contact-options {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+header.top .header-contact-menu .contact-options a {
+  display: grid !important;
+  grid-template-columns: 72px minmax(0,1fr) 18px !important;
+  column-gap: 5px !important;
+  align-items: center !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+  color: #111827 !important;
+  font-size: 13.5px !important;
+  font-weight: 550 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  background: transparent !important;
+}
+
+header.top .header-contact-menu .contact-options a:hover,
+header.top .header-contact-menu .contact-options a:focus {
+  background: #f6f5f2 !important;
+  color: var(--smartiq-red) !important;
+}
+
+header.top .contact-option-copy {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+
+header.top .contact-option-copy strong {
+  font-size: 13.25px !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+header.top .contact-option-copy small {
+  font-size: 12px !important;
+  justify-self: end !important;
+  text-align: right !important;
+  max-width: 100% !important;
+  color: inherit !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+header.top .contact-option-arrow {
+  justify-self: end !important;
+  font-size: 14px !important;
+  margin-left: 0 !important;
+}
+
+/* Mobile toggle */
+header.top .mobile-menu-toggle {
+  appearance: none !important;
+  border: 1px solid rgba(17,24,39,.10) !important;
+  background: #fff !important;
+  color: var(--smartiq-ink) !important;
+  width: 44px !important;
+  height: 40px !important;
+  border-radius: 12px !important;
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  padding: 0 !important;
+  margin-left: auto !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+
+header.top .mobile-menu-toggle span {
+  display: block !important;
+  width: 18px !important;
+  height: 2px !important;
+  border-radius: 999px !important;
+  background: currentColor !important;
+  transition: transform .16s ease, opacity .16s ease !important;
+}
+
+header.top .mobile-menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+}
+
+header.top .mobile-menu-toggle.is-open span:nth-child(2) {
+  opacity: 0 !important;
+}
+
+header.top .mobile-menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+}
+
+/* Mobile menu */
+header.top .mobile-menu {
+  position: absolute !important;
+  left: 16px !important;
+  right: 16px !important;
+  top: calc(100% + 8px) !important;
+  z-index: 10000 !important;
+  display: none !important;
+  background: #fff !important;
+  border: 1px solid rgba(17,24,39,.08) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 20px 50px rgba(17,24,39,.16), 0 2px 8px rgba(17,24,39,.05) !important;
+  padding: 12px !important;
+  max-height: calc(100dvh - 110px) !important;
+  overflow-y: auto !important;
+  padding-bottom: max(22px, env(safe-area-inset-bottom)) !important;
+}
+
+header.top .mobile-menu.is-open {
+  display: grid !important;
+  gap: 8px !important;
+}
+
+header.top .mobile-menu a,
+header.top .mobile-menu-heading {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+header.top .mobile-menu a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: 44px !important;
+  padding: 11px 12px !important;
+  border-radius: 12px !important;
+  color: #111827 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  background: #fff !important;
+  border: 1px solid transparent !important;
+}
+
+header.top .mobile-menu a:hover,
+header.top .mobile-menu a:focus {
+  background: #f7f7f8 !important;
+  color: var(--smartiq-red) !important;
+  border-color: rgba(196,0,0,.14) !important;
+}
+
+header.top .mobile-start-link {
+  background: #fff !important;
+  color: var(--smartiq-red) !important;
+  border: 1px solid rgba(196,0,0,.18) !important;
+  justify-content: center !important;
+}
+
+header.top .mobile-home-search-link {
+  background: #f7f7f8 !important;
+  border: 1px solid rgba(17,24,39,.07) !important;
+  justify-content: center !important;
+  color: #111827 !important;
+}
+
+header.top .mobile-menu-group {
+  display: grid !important;
+  gap: 4px !important;
+  padding: 8px 0 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid rgba(17,24,39,.07) !important;
+}
+
+header.top .mobile-menu-heading {
+  padding: 5px 12px 1px !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: #6b7280 !important;
+}
+
+header.top .mobile-contact-group {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+header.top .mobile-contact-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+}
+
+header.top .mobile-contact-grid a {
+  min-height: 46px !important;
+  padding: 10px 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background: #f7f7f8 !important;
+  border: 1px solid rgba(17,24,39,.07) !important;
+  color: #111827 !important;
+  white-space: nowrap !important;
+}
+
+header.top .mobile-contact-grid a:hover,
+header.top .mobile-contact-grid a:focus,
+header.top .mobile-contact-grid a:focus-visible {
+  background: #ffffff !important;
+  border-color: rgba(196,0,0,.18) !important;
+  color: var(--smartiq-red) !important;
+}
+
+/* Page-proof responsive guard
+   These rules intentionally use !important so older page-level nav/menu CSS cannot override the approved header. */
+@media (max-width: 900px) {
+  header.top .nav,
+  header.top .wrap.nav {
+    padding: 13px 16px !important;
+    gap: 12px !important;
+  }
+
+  header.top .nav-links.desktop-nav.simple-dropdown-nav,
+  header.top .desktop-nav,
+  header.top nav.desktop-nav,
+  header.top .nav-links.desktop-nav {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  header.top .mobile-menu-toggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  header.top .mobile-menu:not(.is-open) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  header.top .mobile-menu.is-open {
+    display: grid !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  header.top .lockup-mark {
+    width: 32px !important;
+    height: 32px !important;
+    flex-basis: 32px !important;
+  }
+
+  header.top .lockup-smart,
+  header.top .lockup-iq {
+    font-size: 15px !important;
+  }
+
+  header.top .lockup-by {
+    font-size: 13px !important;
+  }
+
+  header.top .lockup-tagline {
+    font-size: 9px !important;
+  }
+}
+
+@media (min-width: 901px) {
+  header.top .mobile-menu-toggle,
+  header.top .mobile-menu {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  header.top .nav-links.desktop-nav.simple-dropdown-nav,
+  header.top .desktop-nav,
+  header.top nav.desktop-nav,
+  header.top .nav-links.desktop-nav {
+    display: flex !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+@media (max-width: 420px) {
+  header.top .mobile-contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  header.top .mobile-contact-grid a {
+    font-size: 13px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+}
+/* === End approved SmartIQ header component v2 CSS === */
+
+
+/* v45: fix approved header contact dropdown text layout */
+@media (min-width: 901px) {
+  header.top .header-contact-menu .contact-options {
+    min-width: 390px !important;
+    width: 390px !important;
+  }
+
+  header.top .header-contact-menu .contact-options a {
+    grid-template-columns: minmax(0, 1fr) 22px !important;
+    column-gap: 14px !important;
+    padding: 14px 16px !important;
+  }
+
+  header.top .contact-option-copy {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: baseline !important;
+    min-width: 0 !important;
+  }
+
+  header.top .contact-option-copy strong {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .contact-option-copy small {
+    justify-self: start !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .contact-option-arrow {
+    justify-self: end !important;
+    align-self: center !important;
+  }
+}
+
+
+/* v46: approved header contact dropdown alignment fix
+   Keeps the approved component, but corrects the desktop contact row layout so
+   Call/Text, phone/email, and arrow align like the approved landing page. */
+@media (min-width: 901px) {
+  header.top .header-contact-menu .contact-options {
+    width: 430px !important;
+    min-width: 430px !important;
+    right: 0 !important;
+    padding: 22px 28px !important;
+    border-radius: 16px !important;
+    gap: 18px !important;
+  }
+
+  header.top .header-contact-menu .contact-options a {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 22px !important;
+    align-items: center !important;
+    column-gap: 18px !important;
+    padding: 0 !important;
+    min-height: 36px !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+
+  header.top .header-contact-menu .contact-options a:hover,
+  header.top .header-contact-menu .contact-options a:focus {
+    background: transparent !important;
+    color: #111827 !important;
+  }
+
+  header.top .contact-option-copy {
+    display: grid !important;
+    grid-template-columns: 105px minmax(0, 1fr) !important;
+    align-items: baseline !important;
+    gap: 24px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  header.top .contact-option-copy strong {
+    font-size: 17px !important;
+    line-height: 1.2 !important;
+    font-weight: 850 !important;
+    color: #111827 !important;
+    text-align: left !important;
+  }
+
+  header.top .contact-option-copy small {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    color: #6b7280 !important;
+    justify-self: end !important;
+    text-align: right !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .contact-option-arrow {
+    justify-self: end !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    color: #111827 !important;
+  }
+}
+
+
+/* v47: force approved desktop Contact Kelvin button styling */
+@media (min-width: 901px) {
+  header.top .nav-links.desktop-nav.simple-dropdown-nav {
+    align-items: center !important;
+  }
+
+  header.top .header-contact {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 46px !important;
+    padding: 0 24px !important;
+    border: 0 !important;
+    border-radius: 16px !important;
+    background: #0b1220 !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 34px rgba(17,24,39,.12) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 750 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .header-contact::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  header.top .header-contact:hover,
+  header.top .header-contact:focus,
+  header.top .header-contact-menu.contact-open .header-contact {
+    background: #0b1220 !important;
+    color: #ffffff !important;
+  }
+}
+
+
+/* v48: restore approved compact desktop Contact Kelvin flyout while keeping black pill button */
+@media (min-width: 901px) {
+  header.top .header-contact {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 46px !important;
+    padding: 0 24px !important;
+    border: 0 !important;
+    border-radius: 16px !important;
+    background: #0b1220 !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 34px rgba(17,24,39,.12) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 750 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .header-contact::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  header.top .header-contact:hover,
+  header.top .header-contact:focus,
+  header.top .header-contact-menu.contact-open .header-contact {
+    background: #0b1220 !important;
+    color: #ffffff !important;
+  }
+
+  header.top .header-contact-menu .contact-options {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+    width: 315px !important;
+    min-width: 315px !important;
+    max-width: 315px !important;
+    background: #fff !important;
+    border: 1px solid rgba(17,24,39,.08) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 36px rgba(17,24,39,.11), 0 2px 8px rgba(17,24,39,.04) !important;
+    padding: 8px !important;
+    display: grid !important;
+    gap: 3px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(6px) !important;
+    transition: opacity .16s ease, transform .16s ease, visibility .16s ease !important;
+    z-index: 10000 !important;
+  }
+
+  header.top .header-contact-menu .contact-options.is-open,
+  header.top .header-contact-menu.contact-open .contact-options {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+
+  header.top .header-contact-menu .contact-options a {
+    display: grid !important;
+    grid-template-columns: 72px minmax(0,1fr) 18px !important;
+    column-gap: 5px !important;
+    align-items: center !important;
+    padding: 10px !important;
+    min-height: 0 !important;
+    border-radius: 8px !important;
+    color: #111827 !important;
+    font-size: 13.5px !important;
+    font-weight: 550 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    text-align: left !important;
+  }
+
+  header.top .header-contact-menu .contact-options a:hover,
+  header.top .header-contact-menu .contact-options a:focus {
+    background: #f6f5f2 !important;
+    color: var(--smartiq-red, #c40000) !important;
+  }
+
+  header.top .contact-option-copy {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: baseline !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  header.top .contact-option-copy strong {
+    font-size: 13.25px !important;
+    line-height: 1.2 !important;
+    font-weight: 650 !important;
+    color: #111827 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .contact-option-copy small {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    font-weight: 550 !important;
+    color: inherit !important;
+    justify-self: end !important;
+    text-align: right !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .contact-option-arrow {
+    justify-self: end !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    margin-left: 0 !important;
+    color: currentColor !important;
+  }
+}
+
+
+/* v49: Contact Kelvin flyout alignment repaired
+   The contact flyout uses one grid row with three direct grid items:
+   label | detail | arrow. The wrapper must be display:contents so the
+   phone/email detail does not get squeezed inside the label column. */
+@media (min-width: 901px) {
+  header.top .header-contact-menu .contact-options {
+    width: 315px !important;
+    min-width: 315px !important;
+    max-width: 315px !important;
+    padding: 8px !important;
+    border-radius: 12px !important;
+    gap: 3px !important;
+  }
+
+  header.top .header-contact-menu .contact-options a {
+    display: grid !important;
+    grid-template-columns: 72px minmax(0, 1fr) 18px !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .header-contact-menu .contact-option-copy {
+    display: contents !important;
+  }
+
+  header.top .header-contact-menu .contact-option-copy strong {
+    grid-column: 1 !important;
+    font-size: 13.5px !important;
+    line-height: 1.15 !important;
+    font-weight: 650 !important;
+    color: #111827 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .header-contact-menu .contact-option-copy small {
+    grid-column: 2 !important;
+    justify-self: end !important;
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+    font-weight: 600 !important;
+    color: #6b7280 !important;
+    text-align: right !important;
+    white-space: nowrap !important;
+  }
+
+  header.top .header-contact-menu .contact-option-arrow {
+    grid-column: 3 !important;
+    justify-self: end !important;
+    align-self: center !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: #111827 !important;
+    margin-left: 0 !important;
+  }
+}
+
+
+/* v50: mobile contact buttons match approved landing page, not black desktop CTA style */
+@media (max-width: 900px) {
+  header.top .mobile-contact-grid a,
+  header.top .mobile-contact-grid a:visited {
+    background: #f7f7f8 !important;
+    border: 1px solid rgba(17,24,39,.07) !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+  }
+  header.top .mobile-contact-grid a:hover,
+  header.top .mobile-contact-grid a:focus,
+  header.top .mobile-contact-grid a:focus-visible {
+    background: #ffffff !important;
+    border-color: rgba(196,0,0,.18) !important;
+    color: #c40000 !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2223,10 +3169,23 @@ header.top img{
       <a href="https://kelvinhart.fathomrealty.com/">Home Search</a>
 <div class="header-contact-menu">
         <button class="header-contact" type="button" aria-haspopup="true" aria-expanded="false" data-contact-toggle>Contact Kelvin</button>
+        
+        
         <div class="contact-options" data-contact-options>
-          <a href="tel:+13178338419">Call <span>↗</span></a>
-          <a href="sms:+13178338419">Text <span>↗</span></a>
-          <a href="mailto:khart@fathomrealty.com">Email <span>↗</span></a>
+          <a href="tel:+13178338419">
+            <span class="contact-option-copy">
+              <strong>Call/Text</strong>
+              <small>317.833.8419</small>
+            </span>
+            <span class="contact-option-arrow">↗</span>
+          </a>
+          <a href="mailto:khart@fathomrealty.com">
+            <span class="contact-option-copy">
+              <strong>Email</strong>
+              <small>khart@fathomrealty.com</small>
+            </span>
+            <span class="contact-option-arrow">↗</span>
+          </a>
         </div>
       </div>
     </nav>
@@ -2238,7 +3197,7 @@ header.top img{
     </button>
 
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-      <a class="mobile-start-link" href="#top">Start Here</a>
+      <a class="mobile-start-link" href="http://smartiqbyhart.com/#tools">Start Here</a>
 
       
       <a class="mobile-home-search-link" href="https://kelvinhart.fathomrealty.com/">Home Search</a>
@@ -2706,93 +3665,125 @@ showStep(current);
 </script>
 
 <script>
+/* === Approved SmartIQ header component v2 JS === */
+/* SmartIQ approved header component v2 */
 (function(){
-  const contactToggle = document.querySelector("[data-contact-toggle]");
-  const contactMenu = document.querySelector("[data-contact-options]");
-  if(contactToggle && contactMenu){
-    contactToggle.addEventListener("click", function(event){
-      event.preventDefault();
-      const isOpen = contactMenu.classList.toggle("is-open");
-      contactToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-    document.addEventListener("click", function(event){
-      if(!contactMenu.contains(event.target) && !contactToggle.contains(event.target)){
-        contactMenu.classList.remove("is-open");
-        contactToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-    document.addEventListener("keydown", function(event){
-      if(event.key === "Escape"){
-        contactMenu.classList.remove("is-open");
-        contactToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-})();
-(function(){
-  const toggle = document.querySelector("[data-mobile-menu-toggle]");
-  const menu = document.querySelector("[data-mobile-menu]");
-  if(!toggle || !menu) return;
-  function setOpen(isOpen){
+  const header = document.querySelector("header.top");
+  if(!header) return;
+
+  const toggle = header.querySelector("[data-mobile-menu-toggle]");
+  const menu = header.querySelector("[data-mobile-menu]");
+
+  function setMobileOpen(isOpen){
+    if(!toggle || !menu) return;
     toggle.classList.toggle("is-open", isOpen);
     menu.classList.toggle("is-open", isOpen);
     toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   }
-  toggle.addEventListener("click", function(event){
-    event.preventDefault();
-    setOpen(!menu.classList.contains("is-open"));
+
+  if(toggle && menu){
+    toggle.addEventListener("click", function(event){
+      event.preventDefault();
+      event.stopPropagation();
+      setMobileOpen(!menu.classList.contains("is-open"));
+    });
+
+    menu.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        setMobileOpen(false);
+      });
+    });
+
+    document.addEventListener("click", function(event){
+      if(!header.contains(event.target)){
+        setMobileOpen(false);
+      }
+    });
+  }
+
+  function closeContactMenus(){
+    header.querySelectorAll(".header-contact-menu").forEach(function(contactMenu){
+      const contactToggle = contactMenu.querySelector("[data-contact-toggle]");
+      const options = contactMenu.querySelector("[data-contact-options]");
+      contactMenu.classList.remove("contact-open");
+      if(options) options.classList.remove("is-open");
+      if(contactToggle) contactToggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  header.addEventListener("click", function(event){
+    const contactToggle = event.target.closest("[data-contact-toggle]");
+    const clickedInsideOptions = event.target.closest("[data-contact-options]");
+
+    if(contactToggle){
+      event.preventDefault();
+      event.stopPropagation();
+
+      const contactMenu = contactToggle.closest(".header-contact-menu");
+      const options = contactMenu ? contactMenu.querySelector("[data-contact-options]") : null;
+      if(!contactMenu || !options) return;
+
+      const shouldOpen = !contactMenu.classList.contains("contact-open");
+      closeContactMenus();
+
+      if(shouldOpen){
+        contactMenu.classList.add("contact-open");
+        options.classList.add("is-open");
+        contactToggle.setAttribute("aria-expanded", "true");
+      }
+      return;
+    }
+
+    if(clickedInsideOptions){
+      const link = event.target.closest("a");
+      if(link) closeContactMenus();
+      return;
+    }
+
+    if(!event.target.closest(".header-contact-menu")){
+      closeContactMenus();
+    }
   });
-  menu.querySelectorAll("a").forEach(function(link){
-    link.addEventListener("click", function(){ setOpen(false); });
-  });
+
   document.addEventListener("click", function(event){
-    if(!menu.contains(event.target) && !toggle.contains(event.target)){ setOpen(false); }
+    if(!header.contains(event.target)){
+      closeContactMenus();
+    }
   });
+
   document.addEventListener("keydown", function(event){
-    if(event.key === "Escape"){ setOpen(false); }
+    if(event.key === "Escape"){
+      setMobileOpen(false);
+      closeContactMenus();
+    }
   });
-})();
-(function(){
-  const dropdowns = document.querySelectorAll(".nav-dropdown");
-  dropdowns.forEach(function(drop){
+
+  header.querySelectorAll(".nav-dropdown").forEach(function(drop){
     const trigger = drop.querySelector(".nav-drop-trigger");
     const menu = drop.querySelector(".nav-drop-menu");
     if(!trigger || !menu) return;
-
-    function openMenu(){
-      drop.classList.add("is-hover-open");
-      trigger.setAttribute("aria-expanded", "true");
-    }
-
-    function closeMenu(){
-      drop.classList.remove("is-hover-open");
-      trigger.setAttribute("aria-expanded", "false");
-    }
 
     drop.addEventListener("mouseenter", function(){
       const active = document.activeElement;
       if(active && active.classList && active.classList.contains("nav-drop-trigger") && !drop.contains(active)){
         active.blur();
       }
-      openMenu();
     });
 
-    drop.addEventListener("mouseleave", closeMenu);
-
-    trigger.addEventListener("click", function(event){
-      event.preventDefault();
-      if(drop.classList.contains("is-hover-open")){
-        closeMenu();
-      } else {
-        openMenu();
-      }
+    trigger.addEventListener("focus", function(){
+      trigger.setAttribute("aria-expanded", "true");
     });
 
-    document.addEventListener("keydown", function(event){
-      if(event.key === "Escape") closeMenu();
+    drop.addEventListener("focusout", function(){
+      window.setTimeout(function(){
+        if(!drop.contains(document.activeElement)){
+          trigger.setAttribute("aria-expanded", "false");
+        }
+      }, 0);
     });
   });
 })();
+/* === End approved SmartIQ header component v2 JS === */
 </script>
 <!-- ═══════════════════════════════════════════════════════════════
      STEP 1 — Paste inside <head>
@@ -2895,7 +3886,7 @@ showStep(current);
      ═══════════════════════════════════════════════════════════════ -->
 <script>
   // ── Show nudge tooltip ──────────────────────────────────────────────────────
-  // Appears after a 4-second delay, auto-dismisses after 12 seconds.
+  // Appears after a 3-second delay, auto-dismisses after 4 seconds.
   // Respects sessionStorage so it only shows once per browser session.
   // Call showChatNudge() manually from any event (e.g. form submit) if needed.
   function showChatNudge() {
