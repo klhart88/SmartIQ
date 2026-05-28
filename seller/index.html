@@ -11,6 +11,8 @@
 <meta content="A clear, modern guide for sellers who want to prepare well, price strategically, market with confidence, and move forward with less stress." property="og:description"/>
 <meta content="website" property="og:type"/>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;850&display=swap');
+
 
 :root {
   --red:#c40000;
@@ -1339,6 +1341,19 @@ details.myth { background:transparent !important; border:0 !important; border-to
   }
 }
 
+
+
+/* Header wordmark font consistency only */
+header.top .smartiq-lockup,
+header.top .smartiq-lockup .lockup-text,
+header.top .smartiq-lockup .lockup-main,
+header.top .smartiq-lockup .lockup-smart,
+header.top .smartiq-lockup .lockup-iq,
+header.top .smartiq-lockup .lockup-by,
+header.top .smartiq-lockup .lockup-tagline {
+  font-family: "Montserrat", "Avenir Next", "Gotham", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
 </style>
 
 <style id="button-width-final-override">
@@ -1631,12 +1646,8 @@ details.myth { background:transparent !important; border:0 !important; border-to
 }
 
 .nav {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 16px 22px;
   display: flex;
   align-items: center;
-  gap: 24px;
 }
 
 .smartiq-lockup {
@@ -1681,7 +1692,6 @@ details.myth { background:transparent !important; border:0 !important; border-to
 
 @media(max-width:900px){
   .top { position: sticky; }
-  .nav { padding: 13px 16px; }
 }
 
 /* Simple dropdown navigation */
@@ -2762,11 +2772,6 @@ showStep(current);
     });
   })();
 </script>
-<!-- ═══════════════════════════════════════════════════════════════
-     STEP 1 — Paste inside <head>
-     All CSS variables are resolved to literal values so this works
-     in any site without the AffordabilityIQ stylesheet.
-     ═══════════════════════════════════════════════════════════════ -->
 <style>
   /* ── Chatbot button pulse ──────────────────────────────────────── */
   @keyframes chatPulse {
