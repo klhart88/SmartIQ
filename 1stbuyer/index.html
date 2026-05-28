@@ -11,6 +11,7 @@
 <meta content="A guided path for first-time buyers: money clarity, home fit, pre-approval, offers, and closing." property="og:description"/>
 <meta content="website" property="og:type"/>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;850&display=swap');
 :root {
   --red:#c40000;
   --gray:#4c4d4f;
@@ -1203,12 +1204,8 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
 }
 
 .nav {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 16px 22px;
   display: flex;
   align-items: center;
-  gap: 24px;
 }
 
 .smartiq-lockup {
@@ -1253,7 +1250,6 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
 
 @media(max-width:900px){
   .top { position: sticky; }
-  .nav { padding: 13px 16px; }
 }
 
 /* Simple dropdown navigation */
@@ -1579,7 +1575,6 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
 
   header.top .nav {
     position: relative !important;
-    padding: 13px 16px !important;
   }
 
   header.top .mobile-menu {
@@ -1716,6 +1711,17 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
     color:#111827 !important;
     outline:none !important;
   }
+}
+
+/* Scoped SmartIQ wordmark font only */
+header.top .smartiq-lockup,
+header.top .smartiq-lockup .lockup-text,
+header.top .smartiq-lockup .lockup-main,
+header.top .smartiq-lockup .lockup-smart,
+header.top .smartiq-lockup .lockup-iq,
+header.top .smartiq-lockup .lockup-by,
+header.top .smartiq-lockup .lockup-tagline {
+  font-family: "Montserrat", "Avenir Next", "Gotham", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
 }
 
 </style>
@@ -2297,11 +2303,6 @@ updateBackToTop();
     });
   })();
 </script>
-<!-- ═══════════════════════════════════════════════════════════════
-     STEP 1 — Paste inside <head>
-     All CSS variables are resolved to literal values so this works
-     in any site without the AffordabilityIQ stylesheet.
-     ═══════════════════════════════════════════════════════════════ -->
 <style>
   /* ── Chatbot button pulse ──────────────────────────────────────── */
   @keyframes chatPulse {
