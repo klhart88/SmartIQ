@@ -1619,6 +1619,104 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
+
+
+
+
+/* CANONICAL DESKTOP CONTACT KELVIN FLYOUT
+   Copied from the approved landing-page header behavior and scoped to the header. */
+@media (min-width:901px){
+  header.top .header-contact-menu{
+    position:relative !important;
+  }
+  header.top .header-contact-menu .contact-options{
+    position:absolute !important;
+    top:calc(100% + 10px) !important;
+    right:0 !important;
+    left:auto !important;
+    width:315px !important;
+    min-width:315px !important;
+    max-width:315px !important;
+    background:#ffffff !important;
+    border:1px solid rgba(17,24,39,.08) !important;
+    border-radius:10px !important;
+    box-shadow:0 16px 36px rgba(17,24,39,.11),0 2px 8px rgba(17,24,39,.04) !important;
+    padding:8px !important;
+    display:grid !important;
+    gap:3px !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(6px) !important;
+    transition:opacity .16s ease, transform .16s ease, visibility .16s ease !important;
+    z-index:9999 !important;
+    text-align:left !important;
+    overflow:visible !important;
+  }
+  header.top .header-contact-menu .contact-options.is-open,
+  header.top .header-contact-menu.contact-open .contact-options{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateY(0) !important;
+  }
+  header.top .header-contact-menu .contact-options a{
+    width:100% !important;
+    box-sizing:border-box !important;
+    display:grid !important;
+    grid-template-columns:72px minmax(0,1fr) 18px !important;
+    align-items:center !important;
+    column-gap:5px !important;
+    padding:10px 10px !important;
+    border-radius:7px !important;
+    background:transparent !important;
+    color:#111827 !important;
+    text-decoration:none !important;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+    white-space:nowrap !important;
+  }
+  header.top .header-contact-menu .contact-option-copy{
+    display:contents !important;
+  }
+  header.top .header-contact-menu .contact-option-copy strong{
+    display:block !important;
+    font-size:13.25px !important;
+    line-height:1.15 !important;
+    font-weight:650 !important;
+    color:#111827 !important;
+    white-space:nowrap !important;
+    text-align:left !important;
+  }
+  header.top .header-contact-menu .contact-option-copy small{
+    display:block !important;
+    min-width:0 !important;
+    font-size:12px !important;
+    line-height:1.15 !important;
+    font-weight:500 !important;
+    color:#6b7280 !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+    justify-self:end !important;
+    text-align:right !important;
+    max-width:100% !important;
+  }
+  header.top .header-contact-menu .contact-option-arrow{
+    justify-self:end !important;
+    color:#111827 !important;
+    font-size:14px !important;
+    line-height:1 !important;
+    margin-left:0 !important;
+  }
+  header.top .header-contact-menu .contact-options a:hover,
+  header.top .header-contact-menu .contact-options a:focus,
+  header.top .header-contact-menu .contact-options a:focus-visible{
+    background:#f5f4f2 !important;
+    color:#111827 !important;
+    outline:none !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1677,7 +1775,7 @@ footer { color:var(--muted); font-size:13px; padding:24px 0 40px; }
 <span></span>
 </button>
 <div class="mobile-menu" data-mobile-menu="" id="mobile-menu">
-<a class="mobile-start-link" href="#tools">Start Here</a>
+<a class="mobile-start-link" href="http://smartiqbyhart.com/#tools">Start Here</a>
 <a class="mobile-home-search-link" href="https://kelvinhart.fathomrealty.com/">Home Search</a>
 <div class="mobile-menu-group">
 <div class="mobile-menu-heading">Tools</div>
@@ -2299,7 +2397,7 @@ updateBackToTop();
      ═══════════════════════════════════════════════════════════════ -->
 <script>
   // ── Show nudge tooltip ──────────────────────────────────────────────────────
-  // Appears after a 4-second delay, auto-dismisses after 7 seconds.
+  // Appears after a 4-second delay, auto-dismisses after 12 seconds.
   // Respects sessionStorage so it only shows once per browser session.
   // Call showChatNudge() manually from any event (e.g. form submit) if needed.
   function showChatNudge() {
