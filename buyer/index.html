@@ -2910,6 +2910,90 @@ a#backToTop.back-to-top .back-to-top-icon path {
   }
 }
 </style>
+
+
+<style id="buyer-guide-back-to-top-v59-landing-color-fix">
+/* Back-to-top consistency update only | Color and arrow matched to approved SmartIQ landing page */
+.mobile-back-top{
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+}
+.mobile-back-top.is-visible,
+.mobile-back-top.show{
+  opacity:1 !important;
+  pointer-events:auto !important;
+  transform:translateY(0) !important;
+}
+.mobile-back-top,
+[data-back-top]{
+  position:fixed !important;
+  left:22px !important;
+  right:auto !important;
+  bottom:22px !important;
+  width:50px !important;
+  height:50px !important;
+  min-width:50px !important;
+  min-height:50px !important;
+  padding:0 !important;
+  border-radius:999px !important;
+  border:1px solid rgba(17,24,39,.10) !important;
+  background:#ffffff !important;
+  color:#c40000 !important;
+  box-shadow:0 14px 30px rgba(17,24,39,.16) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:0 !important;
+  z-index:90 !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  text-decoration:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+  appearance:none !important;
+  cursor:pointer !important;
+}
+.mobile-back-top span,
+[data-back-top] span{
+  display:none !important;
+}
+.mobile-back-top svg,
+[data-back-top] svg{
+  display:none !important;
+}
+.mobile-back-top::before,
+[data-back-top]::before{
+  content:"" !important;
+  display:block !important;
+  width:13px !important;
+  height:13px !important;
+  border-top:3px solid #c40000 !important;
+  border-left:3px solid #c40000 !important;
+  transform:rotate(45deg) translate(2px,2px) !important;
+}
+.mobile-back-top::after,
+[data-back-top]::after{
+  content:none !important;
+  display:none !important;
+}
+.mobile-back-top:hover,
+.mobile-back-top:focus-visible,
+[data-back-top]:hover,
+[data-back-top]:focus-visible{
+  background:#ffffff !important;
+  color:#c40000 !important;
+  border-color:rgba(17,24,39,.10) !important;
+  box-shadow:0 14px 30px rgba(17,24,39,.16) !important;
+}
+@media(max-width:760px){
+  .mobile-back-top,
+  [data-back-top]{
+    left:22px !important;
+    right:auto !important;
+    bottom:calc(22px + env(safe-area-inset-bottom)) !important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="top" id="top">
@@ -3267,11 +3351,7 @@ a#backToTop.back-to-top .back-to-top-icon path {
 </div>
 </section>
 </main>
-<a aria-label="Back to top" class="back-to-top" href="#top" id="backToTop">
-<svg aria-hidden="true" class="back-to-top-icon" focusable="false" style="color:#ffffff;fill:#ffffff;" viewbox="0 0 24 24">
-<path d="M12 5L5 12.2l1.9 1.9 3.75-3.85V20h2.7v-9.75l3.75 3.85 1.9-1.9L12 5z" fill="#ffffff"></path>
-</svg>
-</a>
+<a aria-label="Back to top" class="mobile-back-top" data-back-top href="#top" id="backToTop"><span>Back to top</span></a>
 <footer>
 <div class="wrapper">© Fathom Realty. Guide prepared for Kelvin Hart, Realtor® with Fathom Realty Indiana.</div>
 </footer>
@@ -3392,6 +3472,7 @@ document.addEventListener('change', (event) => {
 });
 window.addEventListener('scroll', () => {
   backToTop.classList.toggle('show', window.scrollY > 520);
+  backToTop.classList.toggle('is-visible', window.scrollY > 520);
 });
 backToTop.addEventListener('click', (event) => {
   event.preventDefault();
