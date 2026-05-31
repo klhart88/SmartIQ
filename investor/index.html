@@ -1347,22 +1347,43 @@
     const submitBtn = document.querySelector('.btn-gold');
     if (submitBtn) { submitBtn.textContent = 'Submitting…'; submitBtn.disabled = true; }
 
-    fetch('https://hooks.zapier.com/hooks/catch/27596963/4bm15j9/', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(() => {
+    // Build a hidden form and POST as application/x-www-form-urlencoded
+    // This avoids CORS preflight while still sending all fields to Zapier
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://hooks.zapier.com/hooks/catch/27596963/4bm15j9/';
+    form.target = 'zapier-iframe';
+    form.style.display = 'none';
+
+    Object.entries(data).forEach(([key, val]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = val || '';
+      form.appendChild(input);
+    });
+
+    const iframe = document.createElement('iframe');
+    iframe.name = 'zapier-iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    document.body.appendChild(form);
+
+    iframe.onload = function() {
       document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
       document.querySelector('.hero-band').style.display = 'none';
       document.getElementById('successScreen').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    })
-    .catch(() => {
-      if (submitBtn) { submitBtn.textContent = 'Submit My Intake Profile ✓'; submitBtn.disabled = false; }
-      alert('There was a problem submitting your form. Please check your connection and try again.');
-    });
+    };
+
+    setTimeout(() => {
+      document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
+      document.querySelector('.hero-band').style.display = 'none';
+      document.getElementById('successScreen').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 2000);
+
+    form.submit();
   }
 
   document.querySelectorAll('.check-item').forEach(item => {
