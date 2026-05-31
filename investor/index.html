@@ -1344,12 +1344,21 @@
       submittedAt: new Date().toISOString()
     };
 
-    console.log('SmartIQ Intake Submission:', data);
-
-    document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
-    document.querySelector('.hero-band').style.display = 'none';
-    document.getElementById('successScreen').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    fetch('PASTE_YOUR_ZAPIER_URL_HERE', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data)
+})
+.then(() => {
+  document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
+  document.querySelector('.hero-band').style.display = 'none';
+  document.getElementById('successScreen').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+.catch(() => {
+  alert('There was a problem submitting your form. Please try again.');
+});
+return;
   }
 
   document.querySelectorAll('.check-item').forEach(item => {
