@@ -1347,34 +1347,35 @@
     const submitBtn = document.querySelector('.btn-gold');
     if (submitBtn) { submitBtn.textContent = 'Submitting…'; submitBtn.disabled = true; }
 
-    // Build a hidden form and POST as application/x-www-form-urlencoded
-    // This avoids CORS preflight while still sending all fields to Zapier
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://hooks.zapier.com/hooks/catch/27596963/4bm15j9/';
-    form.target = 'zapier-iframe';
-    form.style.display = 'none';
+    const WEBHOOKS = [
+      'https://hooks.zapier.com/hooks/catch/27596963/4bm15j9/',
+      'https://hooks.zapier.com/hooks/catch/27596963/4bmaeaa/'
+    ];
 
-    Object.entries(data).forEach(([key, val]) => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = val || '';
-      form.appendChild(input);
-    });
+    function postToWebhook(url, index) {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = url;
+      form.target = 'zapier-iframe-' + index;
+      form.style.display = 'none';
 
-    const iframe = document.createElement('iframe');
-    iframe.name = 'zapier-iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-    document.body.appendChild(form);
+      Object.entries(data).forEach(([key, val]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = val || '';
+        form.appendChild(input);
+      });
 
-    iframe.onload = function() {
-      document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
-      document.querySelector('.hero-band').style.display = 'none';
-      document.getElementById('successScreen').classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+      const iframe = document.createElement('iframe');
+      iframe.name = 'zapier-iframe-' + index;
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      document.body.appendChild(form);
+      form.submit();
+    }
+
+    WEBHOOKS.forEach((url, i) => postToWebhook(url, i));
 
     setTimeout(() => {
       document.querySelectorAll('.form-section').forEach(s => s.classList.remove('active'));
@@ -1382,8 +1383,6 @@
       document.getElementById('successScreen').classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 2000);
-
-    form.submit();
   }
 
   document.querySelectorAll('.check-item').forEach(item => {
